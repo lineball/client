@@ -12,19 +12,85 @@
     "react-scripts": "2.1.5",
     "typescript": "3.3.3"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.3.0",
+    "@typescript-eslint/parser": "^1.3.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-config-react-app": "^3.0.7",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.3.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.0.2",
+    "prettier": "^1.16.4"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "settings": {
+      "import/resolver": {
+        "typescript": {
+          "extensions": [
+            ".ts",
+            ".tsx"
+          ]
+        }
+      },
+      "react": {
+        "version": "detect"
+      }
+    },
+    "extends": [
+      "airbnb",
+      "react-app",
+      "plugin:@typescript-eslint/recommended",
+      "prettier/@typescript-eslint",
+      "plugin:prettier/recommended",
+      "prettier/react"
+    ],
+    "plugins": [
+      "@typescript-eslint",
+      "react",
+      "prettier"
+    ],
+    "rules": {
+      "react/jsx-filename-extension": "off",
+      "react/jsx-one-expression-per-line": "off",
+      "import/no-self-import": "off",
+      "import/no-unresolved": "off",
+      "import/no-extraneous-dependencies": "off",
+      "import/no-duplicates": "off",
+      "import/extensions": "off",
+      "import/order": "off",
+      "import/no-named-as-default-member": "off",
+      "import/no-cycle": "off",
+      "import/no-useless-path-segments": "off",
+      "import/no-named-as-default": "off"
+    }
+  },
+  "prettier": {
+    "singleQuote": true,
+    "tabWidth": 2
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "lint": "eslint src/**.ts*",
+    "lint:fix": "yarn lint --fix"
+  }
 }
