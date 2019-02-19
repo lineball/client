@@ -1,6 +1,5 @@
 # Javascript Node CircleCI 2.0 configuration file
 # https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2.1
 executors:
   node:
@@ -10,9 +9,6 @@ executors:
 
 jobs:
   install:
-    branches:
-      ignore:
-        - gh-pages
     executor: node
     steps:
       - checkout
