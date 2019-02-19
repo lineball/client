@@ -71,11 +71,7 @@ workflows:
   version: 2
   build-and-deploy:
     jobs:
-      - install:
-          filters:
-            branches:
-              ignore:
-                - gh-pages
+      - install
       - test:
           requires:
             - install
@@ -88,4 +84,4 @@ workflows:
             - build
           filters:
             branches:
-              only: circleci
+              only: master
