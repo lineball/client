@@ -2,7 +2,6 @@
 # https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2.1
-
 executors:
   node:
     docker:
@@ -11,6 +10,9 @@ executors:
 
 jobs:
   install:
+    branches:
+      ignore:
+        - gh-pages
     executor: node
     steps:
       - checkout
@@ -52,6 +54,9 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/repo
+      - run:
+          name: add github.com to known hosts
+          command: ssh-keyscan github.com >> ~/.ssh/known_hosts
       - run:
           name: install gh-pages
           command: sudo npm install -g gh-pages
