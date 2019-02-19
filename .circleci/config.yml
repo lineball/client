@@ -53,7 +53,7 @@ jobs:
       - run:
           name: add github.com to known hosts
           command: |
-            touch ~/.ssh/known_hosts
+            mkdir ~/.ssh
             ssh-keyscan github.com >> ~/.ssh/known_hosts
       - run:
           name: install gh-pages
