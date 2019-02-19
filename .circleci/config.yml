@@ -59,6 +59,11 @@ jobs:
           name: install gh-pages
           command: sudo npm install -g gh-pages
       - run:
+          name: setup git config
+          command: |
+            git config --global user.email "lineball@circleci.com"
+            git config --global user.name "circleci"
+      - run:
           name: deploy app to gh-pages
           command: gh-pages -d build
 
