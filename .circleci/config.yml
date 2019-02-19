@@ -52,8 +52,13 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/repo
-      - run: yarn global add gh-pages
-      - run: gh-pages -d build
+      - run:
+          name: install gh-pages
+          command: |
+            npm install -g gh-pages
+      - run:
+          name: deploy app to gh-pages
+          command: gh-pages -d build
 
 workflows:
   version: 2
