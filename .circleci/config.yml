@@ -65,7 +65,7 @@ jobs:
             git config --global user.name "circleci"
       - run:
           name: deploy app to gh-pages
-          command: gh-pages -d build
+          command: gh-pages -d build -m "[skip ci] Deploy with CircleCI"
 
 workflows:
   version: 2
