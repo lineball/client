@@ -2,18 +2,17 @@ import React, { useState } from 'react';
 import { Store } from '../store';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
-import { addEdge } from '../store/game/actions';
-import { Edge } from '../store/game/reducers';
-
-export interface Position {
-  x: number;
-  y: number;
-}
+import { addMove } from '../store/game/actions';
+import { Field, Position } from './def';
+import { getSVGPosition } from './util';
+import { getCurrentField, getPossibleFields } from '../store/game/selectors';
 
 interface Props {
   position: Position;
-  current: Position;
-  addEdge: Function;
+  current: Field;
+  addMove: (field: Field) => void;
+  field: Field;
+  isValidMove: boolean;
 }
 
 const Dot = (props: Props) => {
@@ -21,37 +20,43 @@ const Dot = (props: Props) => {
   const {
     position: { x, y },
     current,
-    addEdge
+    addMove,
+    field,
+    isValidMove
   } = props;
-  const isCurrent = current.x === x && current.y === y;
-
+  const isCurrent = current.position.x === x && current.position.y === y;
+  const { x: svgX, y: svgY } = getSVGPosition({ x, y });
+  const { x: svgCX, y: svgCY } = getSVGPosition(current.position);
   return (
     <>
-      <circle
-        onClick={() =>
-          addEdge(new Edge([{ x: current.x, y: current.y }, { x, y }]))
-        }
-        r="4"
-        fill="transparent"
-        cx={x}
-        cy={y}
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-      />
+      {isValidMove && (
+        <circle
+          onClick={() => {
+            setHover(false);
+            addMove(field);
+          }}
+          r="4"
+          fill="transparent"
+          cx={svgX}
+          cy={svgY}
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+        />
+      )}
       <circle
         pointerEvents="none"
-        cx={x}
-        cy={y}
+        cx={svgX}
+        cy={svgY}
         r={hover || isCurrent ? '2' : '0.5'}
         fill={isCurrent ? 'red' : 'white'}
       />
-      {hover && (
+      {hover && isValidMove && (
         <line
           pointerEvents="none"
-          x1={current.x}
-          y1={current.y}
-          x2={x}
-          y2={y}
+          x1={svgCX}
+          y1={svgCY}
+          x2={svgX}
+          y2={svgY}
           stroke="pink"
         />
       )}
@@ -59,12 +64,13 @@ const Dot = (props: Props) => {
   );
 };
 
-const mapStateToProps = ({ game: { position } }: Store) => ({
-  current: position
+const mapStateToProps = ({ game }: Store, props: Props) => ({
+  current: getCurrentField(game),
+  isValidMove: getPossibleFields(game).includes(props.field)
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-  addEdge: (edge: Edge) => dispatch(addEdge(edge))
+  addMove: (field: Field) => dispatch(addMove(field))
 });
 
 export default connect(

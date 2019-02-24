@@ -1,24 +1,23 @@
 import React from 'react';
-import Node from './Dot';
+import Dot from './Dot';
 import { connect } from 'react-redux';
 import { Store } from '../store';
-
-export interface BoardSize {
-  x: number;
-  y: number;
-}
+import { Move, Size } from './def';
+import { getSVGPosition } from './util';
 
 interface Props {
-  size: BoardSize;
-  nodes: Array<any>;
-  edges: Array<any>;
+  size: Size;
+  fields: Array<any>;
+  moves: Array<any>;
+  borders: Array<any>;
 }
 
 const Board = (props: Props) => {
   const {
-    nodes,
-    edges,
-    size: { x, y }
+    fields,
+    moves,
+    size: { x, y },
+    borders
   } = props;
   return (
     <svg
@@ -26,33 +25,64 @@ const Board = (props: Props) => {
       height={50 * (y + 1)}
       viewBox={`0 0 ${10 * x} ${10 * y}`}
     >
-      {edges.map(edge => (
-        <line
-          key={`
-            ${edge.position[0].x}
-            ${edge.position[0].y}
-            ${edge.position[1].x}
-            ${edge.position[1].y}
-          `}
-          pointerEvents="none"
-          x1={edge.position[0].x}
-          y1={edge.position[0].y}
-          x2={edge.position[1].x}
-          y2={edge.position[1].y}
-          stroke="white"
+      {borders.map(border => {
+        const { x: x1, y: y1 } = getSVGPosition(border[0].position);
+        const { x: x2, y: y2 } = getSVGPosition(border[1].position);
+        return (
+          <line
+            key={`
+              ${x1}
+              ${y1}
+              ${x2}
+              ${y2}
+            `}
+            pointerEvents="none"
+            x1={x1}
+            y1={y1}
+            x2={x2}
+            y2={y2}
+            stroke="blue"
+          />
+        );
+      })}
+      {moves.map((move: Move) => {
+        const { x: x1, y: y1 } = getSVGPosition(move.path[0].position);
+        const { x: x2, y: y2 } = getSVGPosition(move.path[1].position);
+        return (
+          <line
+            key={`
+              ${x1}
+              ${y1}
+              ${x2}
+              ${y2}
+            `}
+            pointerEvents="none"
+            x1={x1}
+            y1={y1}
+            x2={x2}
+            y2={y2}
+            stroke="white"
+          />
+        );
+      })}
+      {fields.map(field => (
+        <Dot
+          {...field}
+          key={`${field.position.x}_${field.position.y}`}
+          field={field}
         />
-      ))}
-      {nodes.map(node => (
-        <Node {...node} key={`${node.position.x}_${node.position.y}`} />
       ))}
     </svg>
   );
 };
 
-const mapStateToProps = ({ game: { nodes, edges, size } }: Store) => ({
-  nodes,
-  edges,
-  size
+const mapStateToProps = ({
+  game: { fields, moves, size, borders }
+}: Store) => ({
+  fields,
+  moves,
+  size,
+  borders
 });
 
 export default connect(mapStateToProps)(Board);

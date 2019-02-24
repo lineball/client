@@ -1,23 +1,15 @@
 import {
+  Action as ReduxAction,
   combineReducers,
   createStore,
-  Store as ReduxStore,
-  Action as ReduxAction
+  Store as ReduxStore
 } from 'redux';
-import game, { Edge } from './game/reducers';
+import game, { GameState } from './game/reducers';
 
 import { devToolsEnhancer } from 'redux-devtools-extension';
-import { BoardSize } from '../game/Board';
-import { Position } from '../game/Dot';
-export interface GameContextInterface {
-  nodes: Array<Node>;
-  edges: Array<Edge>;
-  size: BoardSize;
-  addEdge: (position: Position) => void;
-  position: Position;
-}
+
 export interface Store extends ReduxStore {
-  game: GameContextInterface;
+  game: GameState;
 }
 
 export interface Action extends ReduxAction {

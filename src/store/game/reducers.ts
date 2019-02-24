@@ -1,65 +1,41 @@
-import { ADD_EDGE, INITIALIZE_BOARD } from './actions';
-import { BoardSize } from '../../game/Board';
-import { flatMap, range } from 'lodash';
+import { ADD_MOVE, REVERT_MOVE } from './actions';
 import { Action } from '../index';
+import { Field, Move, Path, Player, Position, Size } from '../../game/def';
+import { initialState } from './init';
+import { getCurrentField } from './selectors';
+import { getKeyFromPath } from '../../game/util';
 
-interface GameContext {
-  nodes: Array<Node>;
-  edges: Array<Edge>;
-  size: BoardSize;
+export interface GameState {
+  fields: Field[];
+  size: Size;
+  paths: Path[];
+  borders: Path[];
+  moves: Move[];
 }
 
-interface Position {
-  x: number;
-  y: number;
-}
-
-class Node {
-  position: Position;
-
-  constructor({ position }: any) {
-    this.position = position;
-  }
-}
-
-export class Edge {
-  position: [Position, Position];
-  constructor(position: [Position, Position]) {
-    this.position = position;
-  }
-}
-
-const initialState = {
-  nodes: flatMap([
-    ...[0, 12].map(y =>
-      range(3, 6).map(x => new Node({ position: { x: x * 10 + 5, y: y * 10 } }))
-    ),
-    ...range(1, 12).map(y =>
-      range(0, 9).map(x => new Node({ position: { x: x * 10 + 5, y: y * 10 } }))
-    )
-  ]),
-  edges: [],
-  size: {
-    x: 9,
-    y: 12
-  },
-  position: {
-    x: 4 * 10 + 5,
-    y: 6 * 10
-  }
-};
-
-export default (state: GameContext = initialState, action: Action) => {
+export default (state: GameState = initialState, action: Action): GameState => {
   switch (action.type) {
-    case INITIALIZE_BOARD: {
-      return initialState;
-    }
-    case ADD_EDGE: {
-      const { payload: edge } = action;
+    case ADD_MOVE: {
+      const { payload: field } = action;
+      const currentField = getCurrentField(state);
+      const path = state.paths.find(
+        f => f.includes(field) && f.includes(currentField)
+      );
+
+      if (!path) {
+        throw new Error('Path not found!');
+      }
+      console.log(getKeyFromPath(path));
+      const direction = path[0] === field ? 0 : 1;
       return {
         ...state,
-        edges: [...state.edges, edge],
-        position: { ...edge.position[1] }
+        moves: [...state.moves, { path, direction, player: Player.BLACK }]
+      };
+    }
+    case REVERT_MOVE: {
+      return {
+        ...state,
+        moves: state.moves.slice(0, -1)
       };
     }
     default: {

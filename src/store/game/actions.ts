@@ -1,14 +1,12 @@
-import { BoardSize } from '../../game/Board';
-import { Edge } from './reducers';
-export const INITIALIZE_BOARD = 'lineball@INITIALIZE_BOARD';
-export const ADD_EDGE = 'lineball@ADD_EDGE';
+import { Field } from '../../game/def';
+export const REVERT_MOVE = 'lineball@REVERT_MOVE';
+export const ADD_MOVE = 'lineball@ADD_MOVE';
 
-export const initBoard = (size: BoardSize) => ({
-  type: INITIALIZE_BOARD,
-  payload: size
+export const addMove = (field: Field) => ({
+  type: ADD_MOVE,
+  payload: field
 });
 
-export const addEdge = (edge: Edge) => ({
-  type: ADD_EDGE,
-  payload: edge
+export const revertMove = () => ({
+  type: REVERT_MOVE
 });

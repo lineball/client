@@ -1,0 +1,6447 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Field initialization tests snapshot tests 1`] = `
+Array [
+  Object {
+    "name": "A3",
+    "position": Object {
+      "x": 3,
+      "y": 0,
+    },
+  },
+  Object {
+    "name": "A4",
+    "position": Object {
+      "x": 4,
+      "y": 0,
+    },
+  },
+  Object {
+    "name": "A5",
+    "position": Object {
+      "x": 5,
+      "y": 0,
+    },
+  },
+  Object {
+    "name": "M3",
+    "position": Object {
+      "x": 3,
+      "y": 12,
+    },
+  },
+  Object {
+    "name": "M4",
+    "position": Object {
+      "x": 4,
+      "y": 12,
+    },
+  },
+  Object {
+    "name": "M5",
+    "position": Object {
+      "x": 5,
+      "y": 12,
+    },
+  },
+  Object {
+    "name": "B0",
+    "position": Object {
+      "x": 0,
+      "y": 1,
+    },
+  },
+  Object {
+    "name": "B1",
+    "position": Object {
+      "x": 1,
+      "y": 1,
+    },
+  },
+  Object {
+    "name": "B2",
+    "position": Object {
+      "x": 2,
+      "y": 1,
+    },
+  },
+  Object {
+    "name": "B3",
+    "position": Object {
+      "x": 3,
+      "y": 1,
+    },
+  },
+  Object {
+    "name": "B4",
+    "position": Object {
+      "x": 4,
+      "y": 1,
+    },
+  },
+  Object {
+    "name": "B5",
+    "position": Object {
+      "x": 5,
+      "y": 1,
+    },
+  },
+  Object {
+    "name": "B6",
+    "position": Object {
+      "x": 6,
+      "y": 1,
+    },
+  },
+  Object {
+    "name": "B7",
+    "position": Object {
+      "x": 7,
+      "y": 1,
+    },
+  },
+  Object {
+    "name": "B8",
+    "position": Object {
+      "x": 8,
+      "y": 1,
+    },
+  },
+  Object {
+    "name": "C0",
+    "position": Object {
+      "x": 0,
+      "y": 2,
+    },
+  },
+  Object {
+    "name": "C1",
+    "position": Object {
+      "x": 1,
+      "y": 2,
+    },
+  },
+  Object {
+    "name": "C2",
+    "position": Object {
+      "x": 2,
+      "y": 2,
+    },
+  },
+  Object {
+    "name": "C3",
+    "position": Object {
+      "x": 3,
+      "y": 2,
+    },
+  },
+  Object {
+    "name": "C4",
+    "position": Object {
+      "x": 4,
+      "y": 2,
+    },
+  },
+  Object {
+    "name": "C5",
+    "position": Object {
+      "x": 5,
+      "y": 2,
+    },
+  },
+  Object {
+    "name": "C6",
+    "position": Object {
+      "x": 6,
+      "y": 2,
+    },
+  },
+  Object {
+    "name": "C7",
+    "position": Object {
+      "x": 7,
+      "y": 2,
+    },
+  },
+  Object {
+    "name": "C8",
+    "position": Object {
+      "x": 8,
+      "y": 2,
+    },
+  },
+  Object {
+    "name": "D0",
+    "position": Object {
+      "x": 0,
+      "y": 3,
+    },
+  },
+  Object {
+    "name": "D1",
+    "position": Object {
+      "x": 1,
+      "y": 3,
+    },
+  },
+  Object {
+    "name": "D2",
+    "position": Object {
+      "x": 2,
+      "y": 3,
+    },
+  },
+  Object {
+    "name": "D3",
+    "position": Object {
+      "x": 3,
+      "y": 3,
+    },
+  },
+  Object {
+    "name": "D4",
+    "position": Object {
+      "x": 4,
+      "y": 3,
+    },
+  },
+  Object {
+    "name": "D5",
+    "position": Object {
+      "x": 5,
+      "y": 3,
+    },
+  },
+  Object {
+    "name": "D6",
+    "position": Object {
+      "x": 6,
+      "y": 3,
+    },
+  },
+  Object {
+    "name": "D7",
+    "position": Object {
+      "x": 7,
+      "y": 3,
+    },
+  },
+  Object {
+    "name": "D8",
+    "position": Object {
+      "x": 8,
+      "y": 3,
+    },
+  },
+  Object {
+    "name": "E0",
+    "position": Object {
+      "x": 0,
+      "y": 4,
+    },
+  },
+  Object {
+    "name": "E1",
+    "position": Object {
+      "x": 1,
+      "y": 4,
+    },
+  },
+  Object {
+    "name": "E2",
+    "position": Object {
+      "x": 2,
+      "y": 4,
+    },
+  },
+  Object {
+    "name": "E3",
+    "position": Object {
+      "x": 3,
+      "y": 4,
+    },
+  },
+  Object {
+    "name": "E4",
+    "position": Object {
+      "x": 4,
+      "y": 4,
+    },
+  },
+  Object {
+    "name": "E5",
+    "position": Object {
+      "x": 5,
+      "y": 4,
+    },
+  },
+  Object {
+    "name": "E6",
+    "position": Object {
+      "x": 6,
+      "y": 4,
+    },
+  },
+  Object {
+    "name": "E7",
+    "position": Object {
+      "x": 7,
+      "y": 4,
+    },
+  },
+  Object {
+    "name": "E8",
+    "position": Object {
+      "x": 8,
+      "y": 4,
+    },
+  },
+  Object {
+    "name": "F0",
+    "position": Object {
+      "x": 0,
+      "y": 5,
+    },
+  },
+  Object {
+    "name": "F1",
+    "position": Object {
+      "x": 1,
+      "y": 5,
+    },
+  },
+  Object {
+    "name": "F2",
+    "position": Object {
+      "x": 2,
+      "y": 5,
+    },
+  },
+  Object {
+    "name": "F3",
+    "position": Object {
+      "x": 3,
+      "y": 5,
+    },
+  },
+  Object {
+    "name": "F4",
+    "position": Object {
+      "x": 4,
+      "y": 5,
+    },
+  },
+  Object {
+    "name": "F5",
+    "position": Object {
+      "x": 5,
+      "y": 5,
+    },
+  },
+  Object {
+    "name": "F6",
+    "position": Object {
+      "x": 6,
+      "y": 5,
+    },
+  },
+  Object {
+    "name": "F7",
+    "position": Object {
+      "x": 7,
+      "y": 5,
+    },
+  },
+  Object {
+    "name": "F8",
+    "position": Object {
+      "x": 8,
+      "y": 5,
+    },
+  },
+  Object {
+    "name": "G0",
+    "position": Object {
+      "x": 0,
+      "y": 6,
+    },
+  },
+  Object {
+    "name": "G1",
+    "position": Object {
+      "x": 1,
+      "y": 6,
+    },
+  },
+  Object {
+    "name": "G2",
+    "position": Object {
+      "x": 2,
+      "y": 6,
+    },
+  },
+  Object {
+    "name": "G3",
+    "position": Object {
+      "x": 3,
+      "y": 6,
+    },
+  },
+  Object {
+    "name": "G4",
+    "position": Object {
+      "x": 4,
+      "y": 6,
+    },
+  },
+  Object {
+    "name": "G5",
+    "position": Object {
+      "x": 5,
+      "y": 6,
+    },
+  },
+  Object {
+    "name": "G6",
+    "position": Object {
+      "x": 6,
+      "y": 6,
+    },
+  },
+  Object {
+    "name": "G7",
+    "position": Object {
+      "x": 7,
+      "y": 6,
+    },
+  },
+  Object {
+    "name": "G8",
+    "position": Object {
+      "x": 8,
+      "y": 6,
+    },
+  },
+  Object {
+    "name": "H0",
+    "position": Object {
+      "x": 0,
+      "y": 7,
+    },
+  },
+  Object {
+    "name": "H1",
+    "position": Object {
+      "x": 1,
+      "y": 7,
+    },
+  },
+  Object {
+    "name": "H2",
+    "position": Object {
+      "x": 2,
+      "y": 7,
+    },
+  },
+  Object {
+    "name": "H3",
+    "position": Object {
+      "x": 3,
+      "y": 7,
+    },
+  },
+  Object {
+    "name": "H4",
+    "position": Object {
+      "x": 4,
+      "y": 7,
+    },
+  },
+  Object {
+    "name": "H5",
+    "position": Object {
+      "x": 5,
+      "y": 7,
+    },
+  },
+  Object {
+    "name": "H6",
+    "position": Object {
+      "x": 6,
+      "y": 7,
+    },
+  },
+  Object {
+    "name": "H7",
+    "position": Object {
+      "x": 7,
+      "y": 7,
+    },
+  },
+  Object {
+    "name": "H8",
+    "position": Object {
+      "x": 8,
+      "y": 7,
+    },
+  },
+  Object {
+    "name": "I0",
+    "position": Object {
+      "x": 0,
+      "y": 8,
+    },
+  },
+  Object {
+    "name": "I1",
+    "position": Object {
+      "x": 1,
+      "y": 8,
+    },
+  },
+  Object {
+    "name": "I2",
+    "position": Object {
+      "x": 2,
+      "y": 8,
+    },
+  },
+  Object {
+    "name": "I3",
+    "position": Object {
+      "x": 3,
+      "y": 8,
+    },
+  },
+  Object {
+    "name": "I4",
+    "position": Object {
+      "x": 4,
+      "y": 8,
+    },
+  },
+  Object {
+    "name": "I5",
+    "position": Object {
+      "x": 5,
+      "y": 8,
+    },
+  },
+  Object {
+    "name": "I6",
+    "position": Object {
+      "x": 6,
+      "y": 8,
+    },
+  },
+  Object {
+    "name": "I7",
+    "position": Object {
+      "x": 7,
+      "y": 8,
+    },
+  },
+  Object {
+    "name": "I8",
+    "position": Object {
+      "x": 8,
+      "y": 8,
+    },
+  },
+  Object {
+    "name": "J0",
+    "position": Object {
+      "x": 0,
+      "y": 9,
+    },
+  },
+  Object {
+    "name": "J1",
+    "position": Object {
+      "x": 1,
+      "y": 9,
+    },
+  },
+  Object {
+    "name": "J2",
+    "position": Object {
+      "x": 2,
+      "y": 9,
+    },
+  },
+  Object {
+    "name": "J3",
+    "position": Object {
+      "x": 3,
+      "y": 9,
+    },
+  },
+  Object {
+    "name": "J4",
+    "position": Object {
+      "x": 4,
+      "y": 9,
+    },
+  },
+  Object {
+    "name": "J5",
+    "position": Object {
+      "x": 5,
+      "y": 9,
+    },
+  },
+  Object {
+    "name": "J6",
+    "position": Object {
+      "x": 6,
+      "y": 9,
+    },
+  },
+  Object {
+    "name": "J7",
+    "position": Object {
+      "x": 7,
+      "y": 9,
+    },
+  },
+  Object {
+    "name": "J8",
+    "position": Object {
+      "x": 8,
+      "y": 9,
+    },
+  },
+  Object {
+    "name": "K0",
+    "position": Object {
+      "x": 0,
+      "y": 10,
+    },
+  },
+  Object {
+    "name": "K1",
+    "position": Object {
+      "x": 1,
+      "y": 10,
+    },
+  },
+  Object {
+    "name": "K2",
+    "position": Object {
+      "x": 2,
+      "y": 10,
+    },
+  },
+  Object {
+    "name": "K3",
+    "position": Object {
+      "x": 3,
+      "y": 10,
+    },
+  },
+  Object {
+    "name": "K4",
+    "position": Object {
+      "x": 4,
+      "y": 10,
+    },
+  },
+  Object {
+    "name": "K5",
+    "position": Object {
+      "x": 5,
+      "y": 10,
+    },
+  },
+  Object {
+    "name": "K6",
+    "position": Object {
+      "x": 6,
+      "y": 10,
+    },
+  },
+  Object {
+    "name": "K7",
+    "position": Object {
+      "x": 7,
+      "y": 10,
+    },
+  },
+  Object {
+    "name": "K8",
+    "position": Object {
+      "x": 8,
+      "y": 10,
+    },
+  },
+  Object {
+    "name": "L0",
+    "position": Object {
+      "x": 0,
+      "y": 11,
+    },
+  },
+  Object {
+    "name": "L1",
+    "position": Object {
+      "x": 1,
+      "y": 11,
+    },
+  },
+  Object {
+    "name": "L2",
+    "position": Object {
+      "x": 2,
+      "y": 11,
+    },
+  },
+  Object {
+    "name": "L3",
+    "position": Object {
+      "x": 3,
+      "y": 11,
+    },
+  },
+  Object {
+    "name": "L4",
+    "position": Object {
+      "x": 4,
+      "y": 11,
+    },
+  },
+  Object {
+    "name": "L5",
+    "position": Object {
+      "x": 5,
+      "y": 11,
+    },
+  },
+  Object {
+    "name": "L6",
+    "position": Object {
+      "x": 6,
+      "y": 11,
+    },
+  },
+  Object {
+    "name": "L7",
+    "position": Object {
+      "x": 7,
+      "y": 11,
+    },
+  },
+  Object {
+    "name": "L8",
+    "position": Object {
+      "x": 8,
+      "y": 11,
+    },
+  },
+]
+`;
+
+exports[`Paths and borders initialization tests snapshot tests 1`] = `
+Array [
+  Array [
+    Object {
+      "name": "A3",
+      "position": Object {
+        "x": 3,
+        "y": 0,
+      },
+    },
+    Object {
+      "name": "A4",
+      "position": Object {
+        "x": 4,
+        "y": 0,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "A3",
+      "position": Object {
+        "x": 3,
+        "y": 0,
+      },
+    },
+    Object {
+      "name": "B3",
+      "position": Object {
+        "x": 3,
+        "y": 1,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "A4",
+      "position": Object {
+        "x": 4,
+        "y": 0,
+      },
+    },
+    Object {
+      "name": "A5",
+      "position": Object {
+        "x": 5,
+        "y": 0,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "A5",
+      "position": Object {
+        "x": 5,
+        "y": 0,
+      },
+    },
+    Object {
+      "name": "B5",
+      "position": Object {
+        "x": 5,
+        "y": 1,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "M3",
+      "position": Object {
+        "x": 3,
+        "y": 12,
+      },
+    },
+    Object {
+      "name": "M4",
+      "position": Object {
+        "x": 4,
+        "y": 12,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "M4",
+      "position": Object {
+        "x": 4,
+        "y": 12,
+      },
+    },
+    Object {
+      "name": "M5",
+      "position": Object {
+        "x": 5,
+        "y": 12,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B0",
+      "position": Object {
+        "x": 0,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "B1",
+      "position": Object {
+        "x": 1,
+        "y": 1,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B0",
+      "position": Object {
+        "x": 0,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C0",
+      "position": Object {
+        "x": 0,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B1",
+      "position": Object {
+        "x": 1,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "B2",
+      "position": Object {
+        "x": 2,
+        "y": 1,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B2",
+      "position": Object {
+        "x": 2,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "B3",
+      "position": Object {
+        "x": 3,
+        "y": 1,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B5",
+      "position": Object {
+        "x": 5,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "B6",
+      "position": Object {
+        "x": 6,
+        "y": 1,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B6",
+      "position": Object {
+        "x": 6,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "B7",
+      "position": Object {
+        "x": 7,
+        "y": 1,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B7",
+      "position": Object {
+        "x": 7,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "B8",
+      "position": Object {
+        "x": 8,
+        "y": 1,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B8",
+      "position": Object {
+        "x": 8,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C8",
+      "position": Object {
+        "x": 8,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C0",
+      "position": Object {
+        "x": 0,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D0",
+      "position": Object {
+        "x": 0,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C8",
+      "position": Object {
+        "x": 8,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D8",
+      "position": Object {
+        "x": 8,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D0",
+      "position": Object {
+        "x": 0,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E0",
+      "position": Object {
+        "x": 0,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D8",
+      "position": Object {
+        "x": 8,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E8",
+      "position": Object {
+        "x": 8,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E0",
+      "position": Object {
+        "x": 0,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F0",
+      "position": Object {
+        "x": 0,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E8",
+      "position": Object {
+        "x": 8,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F8",
+      "position": Object {
+        "x": 8,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F0",
+      "position": Object {
+        "x": 0,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G0",
+      "position": Object {
+        "x": 0,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F8",
+      "position": Object {
+        "x": 8,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G8",
+      "position": Object {
+        "x": 8,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G0",
+      "position": Object {
+        "x": 0,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H0",
+      "position": Object {
+        "x": 0,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G8",
+      "position": Object {
+        "x": 8,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H8",
+      "position": Object {
+        "x": 8,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H0",
+      "position": Object {
+        "x": 0,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I0",
+      "position": Object {
+        "x": 0,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H8",
+      "position": Object {
+        "x": 8,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I8",
+      "position": Object {
+        "x": 8,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I0",
+      "position": Object {
+        "x": 0,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J0",
+      "position": Object {
+        "x": 0,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I8",
+      "position": Object {
+        "x": 8,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J8",
+      "position": Object {
+        "x": 8,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J0",
+      "position": Object {
+        "x": 0,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K0",
+      "position": Object {
+        "x": 0,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J8",
+      "position": Object {
+        "x": 8,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K8",
+      "position": Object {
+        "x": 8,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K0",
+      "position": Object {
+        "x": 0,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L0",
+      "position": Object {
+        "x": 0,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K8",
+      "position": Object {
+        "x": 8,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L8",
+      "position": Object {
+        "x": 8,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "L0",
+      "position": Object {
+        "x": 0,
+        "y": 11,
+      },
+    },
+    Object {
+      "name": "L1",
+      "position": Object {
+        "x": 1,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "L1",
+      "position": Object {
+        "x": 1,
+        "y": 11,
+      },
+    },
+    Object {
+      "name": "L2",
+      "position": Object {
+        "x": 2,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "L2",
+      "position": Object {
+        "x": 2,
+        "y": 11,
+      },
+    },
+    Object {
+      "name": "L3",
+      "position": Object {
+        "x": 3,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "L3",
+      "position": Object {
+        "x": 3,
+        "y": 11,
+      },
+    },
+    Object {
+      "name": "M3",
+      "position": Object {
+        "x": 3,
+        "y": 12,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "L5",
+      "position": Object {
+        "x": 5,
+        "y": 11,
+      },
+    },
+    Object {
+      "name": "M5",
+      "position": Object {
+        "x": 5,
+        "y": 12,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "L5",
+      "position": Object {
+        "x": 5,
+        "y": 11,
+      },
+    },
+    Object {
+      "name": "L6",
+      "position": Object {
+        "x": 6,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "L6",
+      "position": Object {
+        "x": 6,
+        "y": 11,
+      },
+    },
+    Object {
+      "name": "L7",
+      "position": Object {
+        "x": 7,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "L7",
+      "position": Object {
+        "x": 7,
+        "y": 11,
+      },
+    },
+    Object {
+      "name": "L8",
+      "position": Object {
+        "x": 8,
+        "y": 11,
+      },
+    },
+  ],
+]
+`;
+
+exports[`Paths and borders initialization tests snapshot tests 2`] = `
+Array [
+  Array [
+    Object {
+      "name": "A3",
+      "position": Object {
+        "x": 3,
+        "y": 0,
+      },
+    },
+    Object {
+      "name": "B4",
+      "position": Object {
+        "x": 4,
+        "y": 1,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "A4",
+      "position": Object {
+        "x": 4,
+        "y": 0,
+      },
+    },
+    Object {
+      "name": "B3",
+      "position": Object {
+        "x": 3,
+        "y": 1,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "A4",
+      "position": Object {
+        "x": 4,
+        "y": 0,
+      },
+    },
+    Object {
+      "name": "B4",
+      "position": Object {
+        "x": 4,
+        "y": 1,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "A4",
+      "position": Object {
+        "x": 4,
+        "y": 0,
+      },
+    },
+    Object {
+      "name": "B5",
+      "position": Object {
+        "x": 5,
+        "y": 1,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "A5",
+      "position": Object {
+        "x": 5,
+        "y": 0,
+      },
+    },
+    Object {
+      "name": "B4",
+      "position": Object {
+        "x": 4,
+        "y": 1,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B0",
+      "position": Object {
+        "x": 0,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C1",
+      "position": Object {
+        "x": 1,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B1",
+      "position": Object {
+        "x": 1,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C0",
+      "position": Object {
+        "x": 0,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B1",
+      "position": Object {
+        "x": 1,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C1",
+      "position": Object {
+        "x": 1,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B1",
+      "position": Object {
+        "x": 1,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C2",
+      "position": Object {
+        "x": 2,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B2",
+      "position": Object {
+        "x": 2,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C1",
+      "position": Object {
+        "x": 1,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B2",
+      "position": Object {
+        "x": 2,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C2",
+      "position": Object {
+        "x": 2,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B2",
+      "position": Object {
+        "x": 2,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C3",
+      "position": Object {
+        "x": 3,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B3",
+      "position": Object {
+        "x": 3,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "B4",
+      "position": Object {
+        "x": 4,
+        "y": 1,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B3",
+      "position": Object {
+        "x": 3,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C2",
+      "position": Object {
+        "x": 2,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B3",
+      "position": Object {
+        "x": 3,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C3",
+      "position": Object {
+        "x": 3,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B3",
+      "position": Object {
+        "x": 3,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C4",
+      "position": Object {
+        "x": 4,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B4",
+      "position": Object {
+        "x": 4,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "B5",
+      "position": Object {
+        "x": 5,
+        "y": 1,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B4",
+      "position": Object {
+        "x": 4,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C3",
+      "position": Object {
+        "x": 3,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B4",
+      "position": Object {
+        "x": 4,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C4",
+      "position": Object {
+        "x": 4,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B4",
+      "position": Object {
+        "x": 4,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C5",
+      "position": Object {
+        "x": 5,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B5",
+      "position": Object {
+        "x": 5,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C4",
+      "position": Object {
+        "x": 4,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B5",
+      "position": Object {
+        "x": 5,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C5",
+      "position": Object {
+        "x": 5,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B5",
+      "position": Object {
+        "x": 5,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C6",
+      "position": Object {
+        "x": 6,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B6",
+      "position": Object {
+        "x": 6,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C5",
+      "position": Object {
+        "x": 5,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B6",
+      "position": Object {
+        "x": 6,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C6",
+      "position": Object {
+        "x": 6,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B6",
+      "position": Object {
+        "x": 6,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C7",
+      "position": Object {
+        "x": 7,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B7",
+      "position": Object {
+        "x": 7,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C6",
+      "position": Object {
+        "x": 6,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B7",
+      "position": Object {
+        "x": 7,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C7",
+      "position": Object {
+        "x": 7,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B7",
+      "position": Object {
+        "x": 7,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C8",
+      "position": Object {
+        "x": 8,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "B8",
+      "position": Object {
+        "x": 8,
+        "y": 1,
+      },
+    },
+    Object {
+      "name": "C7",
+      "position": Object {
+        "x": 7,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C0",
+      "position": Object {
+        "x": 0,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "C1",
+      "position": Object {
+        "x": 1,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C0",
+      "position": Object {
+        "x": 0,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D1",
+      "position": Object {
+        "x": 1,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C1",
+      "position": Object {
+        "x": 1,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "C2",
+      "position": Object {
+        "x": 2,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C1",
+      "position": Object {
+        "x": 1,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D0",
+      "position": Object {
+        "x": 0,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C1",
+      "position": Object {
+        "x": 1,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D1",
+      "position": Object {
+        "x": 1,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C1",
+      "position": Object {
+        "x": 1,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D2",
+      "position": Object {
+        "x": 2,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C2",
+      "position": Object {
+        "x": 2,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "C3",
+      "position": Object {
+        "x": 3,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C2",
+      "position": Object {
+        "x": 2,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D1",
+      "position": Object {
+        "x": 1,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C2",
+      "position": Object {
+        "x": 2,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D2",
+      "position": Object {
+        "x": 2,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C2",
+      "position": Object {
+        "x": 2,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D3",
+      "position": Object {
+        "x": 3,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C3",
+      "position": Object {
+        "x": 3,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "C4",
+      "position": Object {
+        "x": 4,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C3",
+      "position": Object {
+        "x": 3,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D2",
+      "position": Object {
+        "x": 2,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C3",
+      "position": Object {
+        "x": 3,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D3",
+      "position": Object {
+        "x": 3,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C3",
+      "position": Object {
+        "x": 3,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D4",
+      "position": Object {
+        "x": 4,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C4",
+      "position": Object {
+        "x": 4,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "C5",
+      "position": Object {
+        "x": 5,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C4",
+      "position": Object {
+        "x": 4,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D3",
+      "position": Object {
+        "x": 3,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C4",
+      "position": Object {
+        "x": 4,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D4",
+      "position": Object {
+        "x": 4,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C4",
+      "position": Object {
+        "x": 4,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D5",
+      "position": Object {
+        "x": 5,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C5",
+      "position": Object {
+        "x": 5,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "C6",
+      "position": Object {
+        "x": 6,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C5",
+      "position": Object {
+        "x": 5,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D4",
+      "position": Object {
+        "x": 4,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C5",
+      "position": Object {
+        "x": 5,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D5",
+      "position": Object {
+        "x": 5,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C5",
+      "position": Object {
+        "x": 5,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D6",
+      "position": Object {
+        "x": 6,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C6",
+      "position": Object {
+        "x": 6,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "C7",
+      "position": Object {
+        "x": 7,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C6",
+      "position": Object {
+        "x": 6,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D5",
+      "position": Object {
+        "x": 5,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C6",
+      "position": Object {
+        "x": 6,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D6",
+      "position": Object {
+        "x": 6,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C6",
+      "position": Object {
+        "x": 6,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D7",
+      "position": Object {
+        "x": 7,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C7",
+      "position": Object {
+        "x": 7,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "C8",
+      "position": Object {
+        "x": 8,
+        "y": 2,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C7",
+      "position": Object {
+        "x": 7,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D6",
+      "position": Object {
+        "x": 6,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C7",
+      "position": Object {
+        "x": 7,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D7",
+      "position": Object {
+        "x": 7,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C7",
+      "position": Object {
+        "x": 7,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D8",
+      "position": Object {
+        "x": 8,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "C8",
+      "position": Object {
+        "x": 8,
+        "y": 2,
+      },
+    },
+    Object {
+      "name": "D7",
+      "position": Object {
+        "x": 7,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D0",
+      "position": Object {
+        "x": 0,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "D1",
+      "position": Object {
+        "x": 1,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D0",
+      "position": Object {
+        "x": 0,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E1",
+      "position": Object {
+        "x": 1,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D1",
+      "position": Object {
+        "x": 1,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "D2",
+      "position": Object {
+        "x": 2,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D1",
+      "position": Object {
+        "x": 1,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E0",
+      "position": Object {
+        "x": 0,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D1",
+      "position": Object {
+        "x": 1,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E1",
+      "position": Object {
+        "x": 1,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D1",
+      "position": Object {
+        "x": 1,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E2",
+      "position": Object {
+        "x": 2,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D2",
+      "position": Object {
+        "x": 2,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "D3",
+      "position": Object {
+        "x": 3,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D2",
+      "position": Object {
+        "x": 2,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E1",
+      "position": Object {
+        "x": 1,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D2",
+      "position": Object {
+        "x": 2,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E2",
+      "position": Object {
+        "x": 2,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D2",
+      "position": Object {
+        "x": 2,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E3",
+      "position": Object {
+        "x": 3,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D3",
+      "position": Object {
+        "x": 3,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "D4",
+      "position": Object {
+        "x": 4,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D3",
+      "position": Object {
+        "x": 3,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E2",
+      "position": Object {
+        "x": 2,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D3",
+      "position": Object {
+        "x": 3,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E3",
+      "position": Object {
+        "x": 3,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D3",
+      "position": Object {
+        "x": 3,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E4",
+      "position": Object {
+        "x": 4,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D4",
+      "position": Object {
+        "x": 4,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "D5",
+      "position": Object {
+        "x": 5,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D4",
+      "position": Object {
+        "x": 4,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E3",
+      "position": Object {
+        "x": 3,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D4",
+      "position": Object {
+        "x": 4,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E4",
+      "position": Object {
+        "x": 4,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D4",
+      "position": Object {
+        "x": 4,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E5",
+      "position": Object {
+        "x": 5,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D5",
+      "position": Object {
+        "x": 5,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "D6",
+      "position": Object {
+        "x": 6,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D5",
+      "position": Object {
+        "x": 5,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E4",
+      "position": Object {
+        "x": 4,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D5",
+      "position": Object {
+        "x": 5,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E5",
+      "position": Object {
+        "x": 5,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D5",
+      "position": Object {
+        "x": 5,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E6",
+      "position": Object {
+        "x": 6,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D6",
+      "position": Object {
+        "x": 6,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "D7",
+      "position": Object {
+        "x": 7,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D6",
+      "position": Object {
+        "x": 6,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E5",
+      "position": Object {
+        "x": 5,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D6",
+      "position": Object {
+        "x": 6,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E6",
+      "position": Object {
+        "x": 6,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D6",
+      "position": Object {
+        "x": 6,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E7",
+      "position": Object {
+        "x": 7,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D7",
+      "position": Object {
+        "x": 7,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "D8",
+      "position": Object {
+        "x": 8,
+        "y": 3,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D7",
+      "position": Object {
+        "x": 7,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E6",
+      "position": Object {
+        "x": 6,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D7",
+      "position": Object {
+        "x": 7,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E7",
+      "position": Object {
+        "x": 7,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D7",
+      "position": Object {
+        "x": 7,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E8",
+      "position": Object {
+        "x": 8,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "D8",
+      "position": Object {
+        "x": 8,
+        "y": 3,
+      },
+    },
+    Object {
+      "name": "E7",
+      "position": Object {
+        "x": 7,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E0",
+      "position": Object {
+        "x": 0,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "E1",
+      "position": Object {
+        "x": 1,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E0",
+      "position": Object {
+        "x": 0,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F1",
+      "position": Object {
+        "x": 1,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E1",
+      "position": Object {
+        "x": 1,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "E2",
+      "position": Object {
+        "x": 2,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E1",
+      "position": Object {
+        "x": 1,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F0",
+      "position": Object {
+        "x": 0,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E1",
+      "position": Object {
+        "x": 1,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F1",
+      "position": Object {
+        "x": 1,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E1",
+      "position": Object {
+        "x": 1,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F2",
+      "position": Object {
+        "x": 2,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E2",
+      "position": Object {
+        "x": 2,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "E3",
+      "position": Object {
+        "x": 3,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E2",
+      "position": Object {
+        "x": 2,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F1",
+      "position": Object {
+        "x": 1,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E2",
+      "position": Object {
+        "x": 2,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F2",
+      "position": Object {
+        "x": 2,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E2",
+      "position": Object {
+        "x": 2,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F3",
+      "position": Object {
+        "x": 3,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E3",
+      "position": Object {
+        "x": 3,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "E4",
+      "position": Object {
+        "x": 4,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E3",
+      "position": Object {
+        "x": 3,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F2",
+      "position": Object {
+        "x": 2,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E3",
+      "position": Object {
+        "x": 3,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F3",
+      "position": Object {
+        "x": 3,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E3",
+      "position": Object {
+        "x": 3,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F4",
+      "position": Object {
+        "x": 4,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E4",
+      "position": Object {
+        "x": 4,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "E5",
+      "position": Object {
+        "x": 5,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E4",
+      "position": Object {
+        "x": 4,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F3",
+      "position": Object {
+        "x": 3,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E4",
+      "position": Object {
+        "x": 4,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F4",
+      "position": Object {
+        "x": 4,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E4",
+      "position": Object {
+        "x": 4,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F5",
+      "position": Object {
+        "x": 5,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E5",
+      "position": Object {
+        "x": 5,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "E6",
+      "position": Object {
+        "x": 6,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E5",
+      "position": Object {
+        "x": 5,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F4",
+      "position": Object {
+        "x": 4,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E5",
+      "position": Object {
+        "x": 5,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F5",
+      "position": Object {
+        "x": 5,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E5",
+      "position": Object {
+        "x": 5,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F6",
+      "position": Object {
+        "x": 6,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E6",
+      "position": Object {
+        "x": 6,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "E7",
+      "position": Object {
+        "x": 7,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E6",
+      "position": Object {
+        "x": 6,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F5",
+      "position": Object {
+        "x": 5,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E6",
+      "position": Object {
+        "x": 6,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F6",
+      "position": Object {
+        "x": 6,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E6",
+      "position": Object {
+        "x": 6,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F7",
+      "position": Object {
+        "x": 7,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E7",
+      "position": Object {
+        "x": 7,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "E8",
+      "position": Object {
+        "x": 8,
+        "y": 4,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E7",
+      "position": Object {
+        "x": 7,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F6",
+      "position": Object {
+        "x": 6,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E7",
+      "position": Object {
+        "x": 7,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F7",
+      "position": Object {
+        "x": 7,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E7",
+      "position": Object {
+        "x": 7,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F8",
+      "position": Object {
+        "x": 8,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "E8",
+      "position": Object {
+        "x": 8,
+        "y": 4,
+      },
+    },
+    Object {
+      "name": "F7",
+      "position": Object {
+        "x": 7,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F0",
+      "position": Object {
+        "x": 0,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "F1",
+      "position": Object {
+        "x": 1,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F0",
+      "position": Object {
+        "x": 0,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G1",
+      "position": Object {
+        "x": 1,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F1",
+      "position": Object {
+        "x": 1,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "F2",
+      "position": Object {
+        "x": 2,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F1",
+      "position": Object {
+        "x": 1,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G0",
+      "position": Object {
+        "x": 0,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F1",
+      "position": Object {
+        "x": 1,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G1",
+      "position": Object {
+        "x": 1,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F1",
+      "position": Object {
+        "x": 1,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G2",
+      "position": Object {
+        "x": 2,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F2",
+      "position": Object {
+        "x": 2,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "F3",
+      "position": Object {
+        "x": 3,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F2",
+      "position": Object {
+        "x": 2,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G1",
+      "position": Object {
+        "x": 1,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F2",
+      "position": Object {
+        "x": 2,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G2",
+      "position": Object {
+        "x": 2,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F2",
+      "position": Object {
+        "x": 2,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G3",
+      "position": Object {
+        "x": 3,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F3",
+      "position": Object {
+        "x": 3,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "F4",
+      "position": Object {
+        "x": 4,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F3",
+      "position": Object {
+        "x": 3,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G2",
+      "position": Object {
+        "x": 2,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F3",
+      "position": Object {
+        "x": 3,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G3",
+      "position": Object {
+        "x": 3,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F3",
+      "position": Object {
+        "x": 3,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G4",
+      "position": Object {
+        "x": 4,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F4",
+      "position": Object {
+        "x": 4,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "F5",
+      "position": Object {
+        "x": 5,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F4",
+      "position": Object {
+        "x": 4,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G3",
+      "position": Object {
+        "x": 3,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F4",
+      "position": Object {
+        "x": 4,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G4",
+      "position": Object {
+        "x": 4,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F4",
+      "position": Object {
+        "x": 4,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G5",
+      "position": Object {
+        "x": 5,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F5",
+      "position": Object {
+        "x": 5,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "F6",
+      "position": Object {
+        "x": 6,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F5",
+      "position": Object {
+        "x": 5,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G4",
+      "position": Object {
+        "x": 4,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F5",
+      "position": Object {
+        "x": 5,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G5",
+      "position": Object {
+        "x": 5,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F5",
+      "position": Object {
+        "x": 5,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G6",
+      "position": Object {
+        "x": 6,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F6",
+      "position": Object {
+        "x": 6,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "F7",
+      "position": Object {
+        "x": 7,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F6",
+      "position": Object {
+        "x": 6,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G5",
+      "position": Object {
+        "x": 5,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F6",
+      "position": Object {
+        "x": 6,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G6",
+      "position": Object {
+        "x": 6,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F6",
+      "position": Object {
+        "x": 6,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G7",
+      "position": Object {
+        "x": 7,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F7",
+      "position": Object {
+        "x": 7,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "F8",
+      "position": Object {
+        "x": 8,
+        "y": 5,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F7",
+      "position": Object {
+        "x": 7,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G6",
+      "position": Object {
+        "x": 6,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F7",
+      "position": Object {
+        "x": 7,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G7",
+      "position": Object {
+        "x": 7,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F7",
+      "position": Object {
+        "x": 7,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G8",
+      "position": Object {
+        "x": 8,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "F8",
+      "position": Object {
+        "x": 8,
+        "y": 5,
+      },
+    },
+    Object {
+      "name": "G7",
+      "position": Object {
+        "x": 7,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G0",
+      "position": Object {
+        "x": 0,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "G1",
+      "position": Object {
+        "x": 1,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G0",
+      "position": Object {
+        "x": 0,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H1",
+      "position": Object {
+        "x": 1,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G1",
+      "position": Object {
+        "x": 1,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "G2",
+      "position": Object {
+        "x": 2,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G1",
+      "position": Object {
+        "x": 1,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H0",
+      "position": Object {
+        "x": 0,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G1",
+      "position": Object {
+        "x": 1,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H1",
+      "position": Object {
+        "x": 1,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G1",
+      "position": Object {
+        "x": 1,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H2",
+      "position": Object {
+        "x": 2,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G2",
+      "position": Object {
+        "x": 2,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "G3",
+      "position": Object {
+        "x": 3,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G2",
+      "position": Object {
+        "x": 2,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H1",
+      "position": Object {
+        "x": 1,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G2",
+      "position": Object {
+        "x": 2,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H2",
+      "position": Object {
+        "x": 2,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G2",
+      "position": Object {
+        "x": 2,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H3",
+      "position": Object {
+        "x": 3,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G3",
+      "position": Object {
+        "x": 3,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "G4",
+      "position": Object {
+        "x": 4,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G3",
+      "position": Object {
+        "x": 3,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H2",
+      "position": Object {
+        "x": 2,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G3",
+      "position": Object {
+        "x": 3,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H3",
+      "position": Object {
+        "x": 3,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G3",
+      "position": Object {
+        "x": 3,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H4",
+      "position": Object {
+        "x": 4,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G4",
+      "position": Object {
+        "x": 4,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "G5",
+      "position": Object {
+        "x": 5,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G4",
+      "position": Object {
+        "x": 4,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H3",
+      "position": Object {
+        "x": 3,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G4",
+      "position": Object {
+        "x": 4,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H4",
+      "position": Object {
+        "x": 4,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G4",
+      "position": Object {
+        "x": 4,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H5",
+      "position": Object {
+        "x": 5,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G5",
+      "position": Object {
+        "x": 5,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "G6",
+      "position": Object {
+        "x": 6,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G5",
+      "position": Object {
+        "x": 5,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H4",
+      "position": Object {
+        "x": 4,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G5",
+      "position": Object {
+        "x": 5,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H5",
+      "position": Object {
+        "x": 5,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G5",
+      "position": Object {
+        "x": 5,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H6",
+      "position": Object {
+        "x": 6,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G6",
+      "position": Object {
+        "x": 6,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "G7",
+      "position": Object {
+        "x": 7,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G6",
+      "position": Object {
+        "x": 6,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H5",
+      "position": Object {
+        "x": 5,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G6",
+      "position": Object {
+        "x": 6,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H6",
+      "position": Object {
+        "x": 6,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G6",
+      "position": Object {
+        "x": 6,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H7",
+      "position": Object {
+        "x": 7,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G7",
+      "position": Object {
+        "x": 7,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "G8",
+      "position": Object {
+        "x": 8,
+        "y": 6,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G7",
+      "position": Object {
+        "x": 7,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H6",
+      "position": Object {
+        "x": 6,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G7",
+      "position": Object {
+        "x": 7,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H7",
+      "position": Object {
+        "x": 7,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G7",
+      "position": Object {
+        "x": 7,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H8",
+      "position": Object {
+        "x": 8,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "G8",
+      "position": Object {
+        "x": 8,
+        "y": 6,
+      },
+    },
+    Object {
+      "name": "H7",
+      "position": Object {
+        "x": 7,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H0",
+      "position": Object {
+        "x": 0,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "H1",
+      "position": Object {
+        "x": 1,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H0",
+      "position": Object {
+        "x": 0,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I1",
+      "position": Object {
+        "x": 1,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H1",
+      "position": Object {
+        "x": 1,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "H2",
+      "position": Object {
+        "x": 2,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H1",
+      "position": Object {
+        "x": 1,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I0",
+      "position": Object {
+        "x": 0,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H1",
+      "position": Object {
+        "x": 1,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I1",
+      "position": Object {
+        "x": 1,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H1",
+      "position": Object {
+        "x": 1,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I2",
+      "position": Object {
+        "x": 2,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H2",
+      "position": Object {
+        "x": 2,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "H3",
+      "position": Object {
+        "x": 3,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H2",
+      "position": Object {
+        "x": 2,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I1",
+      "position": Object {
+        "x": 1,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H2",
+      "position": Object {
+        "x": 2,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I2",
+      "position": Object {
+        "x": 2,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H2",
+      "position": Object {
+        "x": 2,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I3",
+      "position": Object {
+        "x": 3,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H3",
+      "position": Object {
+        "x": 3,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "H4",
+      "position": Object {
+        "x": 4,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H3",
+      "position": Object {
+        "x": 3,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I2",
+      "position": Object {
+        "x": 2,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H3",
+      "position": Object {
+        "x": 3,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I3",
+      "position": Object {
+        "x": 3,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H3",
+      "position": Object {
+        "x": 3,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I4",
+      "position": Object {
+        "x": 4,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H4",
+      "position": Object {
+        "x": 4,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "H5",
+      "position": Object {
+        "x": 5,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H4",
+      "position": Object {
+        "x": 4,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I3",
+      "position": Object {
+        "x": 3,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H4",
+      "position": Object {
+        "x": 4,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I4",
+      "position": Object {
+        "x": 4,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H4",
+      "position": Object {
+        "x": 4,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I5",
+      "position": Object {
+        "x": 5,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H5",
+      "position": Object {
+        "x": 5,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "H6",
+      "position": Object {
+        "x": 6,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H5",
+      "position": Object {
+        "x": 5,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I4",
+      "position": Object {
+        "x": 4,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H5",
+      "position": Object {
+        "x": 5,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I5",
+      "position": Object {
+        "x": 5,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H5",
+      "position": Object {
+        "x": 5,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I6",
+      "position": Object {
+        "x": 6,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H6",
+      "position": Object {
+        "x": 6,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "H7",
+      "position": Object {
+        "x": 7,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H6",
+      "position": Object {
+        "x": 6,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I5",
+      "position": Object {
+        "x": 5,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H6",
+      "position": Object {
+        "x": 6,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I6",
+      "position": Object {
+        "x": 6,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H6",
+      "position": Object {
+        "x": 6,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I7",
+      "position": Object {
+        "x": 7,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H7",
+      "position": Object {
+        "x": 7,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "H8",
+      "position": Object {
+        "x": 8,
+        "y": 7,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H7",
+      "position": Object {
+        "x": 7,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I6",
+      "position": Object {
+        "x": 6,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H7",
+      "position": Object {
+        "x": 7,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I7",
+      "position": Object {
+        "x": 7,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H7",
+      "position": Object {
+        "x": 7,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I8",
+      "position": Object {
+        "x": 8,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "H8",
+      "position": Object {
+        "x": 8,
+        "y": 7,
+      },
+    },
+    Object {
+      "name": "I7",
+      "position": Object {
+        "x": 7,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I0",
+      "position": Object {
+        "x": 0,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "I1",
+      "position": Object {
+        "x": 1,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I0",
+      "position": Object {
+        "x": 0,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J1",
+      "position": Object {
+        "x": 1,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I1",
+      "position": Object {
+        "x": 1,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "I2",
+      "position": Object {
+        "x": 2,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I1",
+      "position": Object {
+        "x": 1,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J0",
+      "position": Object {
+        "x": 0,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I1",
+      "position": Object {
+        "x": 1,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J1",
+      "position": Object {
+        "x": 1,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I1",
+      "position": Object {
+        "x": 1,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J2",
+      "position": Object {
+        "x": 2,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I2",
+      "position": Object {
+        "x": 2,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "I3",
+      "position": Object {
+        "x": 3,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I2",
+      "position": Object {
+        "x": 2,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J1",
+      "position": Object {
+        "x": 1,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I2",
+      "position": Object {
+        "x": 2,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J2",
+      "position": Object {
+        "x": 2,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I2",
+      "position": Object {
+        "x": 2,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J3",
+      "position": Object {
+        "x": 3,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I3",
+      "position": Object {
+        "x": 3,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "I4",
+      "position": Object {
+        "x": 4,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I3",
+      "position": Object {
+        "x": 3,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J2",
+      "position": Object {
+        "x": 2,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I3",
+      "position": Object {
+        "x": 3,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J3",
+      "position": Object {
+        "x": 3,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I3",
+      "position": Object {
+        "x": 3,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J4",
+      "position": Object {
+        "x": 4,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I4",
+      "position": Object {
+        "x": 4,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "I5",
+      "position": Object {
+        "x": 5,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I4",
+      "position": Object {
+        "x": 4,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J3",
+      "position": Object {
+        "x": 3,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I4",
+      "position": Object {
+        "x": 4,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J4",
+      "position": Object {
+        "x": 4,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I4",
+      "position": Object {
+        "x": 4,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J5",
+      "position": Object {
+        "x": 5,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I5",
+      "position": Object {
+        "x": 5,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "I6",
+      "position": Object {
+        "x": 6,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I5",
+      "position": Object {
+        "x": 5,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J4",
+      "position": Object {
+        "x": 4,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I5",
+      "position": Object {
+        "x": 5,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J5",
+      "position": Object {
+        "x": 5,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I5",
+      "position": Object {
+        "x": 5,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J6",
+      "position": Object {
+        "x": 6,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I6",
+      "position": Object {
+        "x": 6,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "I7",
+      "position": Object {
+        "x": 7,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I6",
+      "position": Object {
+        "x": 6,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J5",
+      "position": Object {
+        "x": 5,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I6",
+      "position": Object {
+        "x": 6,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J6",
+      "position": Object {
+        "x": 6,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I6",
+      "position": Object {
+        "x": 6,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J7",
+      "position": Object {
+        "x": 7,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I7",
+      "position": Object {
+        "x": 7,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "I8",
+      "position": Object {
+        "x": 8,
+        "y": 8,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I7",
+      "position": Object {
+        "x": 7,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J6",
+      "position": Object {
+        "x": 6,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I7",
+      "position": Object {
+        "x": 7,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J7",
+      "position": Object {
+        "x": 7,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I7",
+      "position": Object {
+        "x": 7,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J8",
+      "position": Object {
+        "x": 8,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "I8",
+      "position": Object {
+        "x": 8,
+        "y": 8,
+      },
+    },
+    Object {
+      "name": "J7",
+      "position": Object {
+        "x": 7,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J0",
+      "position": Object {
+        "x": 0,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "J1",
+      "position": Object {
+        "x": 1,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J0",
+      "position": Object {
+        "x": 0,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K1",
+      "position": Object {
+        "x": 1,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J1",
+      "position": Object {
+        "x": 1,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "J2",
+      "position": Object {
+        "x": 2,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J1",
+      "position": Object {
+        "x": 1,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K0",
+      "position": Object {
+        "x": 0,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J1",
+      "position": Object {
+        "x": 1,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K1",
+      "position": Object {
+        "x": 1,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J1",
+      "position": Object {
+        "x": 1,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K2",
+      "position": Object {
+        "x": 2,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J2",
+      "position": Object {
+        "x": 2,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "J3",
+      "position": Object {
+        "x": 3,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J2",
+      "position": Object {
+        "x": 2,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K1",
+      "position": Object {
+        "x": 1,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J2",
+      "position": Object {
+        "x": 2,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K2",
+      "position": Object {
+        "x": 2,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J2",
+      "position": Object {
+        "x": 2,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K3",
+      "position": Object {
+        "x": 3,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J3",
+      "position": Object {
+        "x": 3,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "J4",
+      "position": Object {
+        "x": 4,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J3",
+      "position": Object {
+        "x": 3,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K2",
+      "position": Object {
+        "x": 2,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J3",
+      "position": Object {
+        "x": 3,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K3",
+      "position": Object {
+        "x": 3,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J3",
+      "position": Object {
+        "x": 3,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K4",
+      "position": Object {
+        "x": 4,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J4",
+      "position": Object {
+        "x": 4,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "J5",
+      "position": Object {
+        "x": 5,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J4",
+      "position": Object {
+        "x": 4,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K3",
+      "position": Object {
+        "x": 3,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J4",
+      "position": Object {
+        "x": 4,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K4",
+      "position": Object {
+        "x": 4,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J4",
+      "position": Object {
+        "x": 4,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K5",
+      "position": Object {
+        "x": 5,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J5",
+      "position": Object {
+        "x": 5,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "J6",
+      "position": Object {
+        "x": 6,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J5",
+      "position": Object {
+        "x": 5,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K4",
+      "position": Object {
+        "x": 4,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J5",
+      "position": Object {
+        "x": 5,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K5",
+      "position": Object {
+        "x": 5,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J5",
+      "position": Object {
+        "x": 5,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K6",
+      "position": Object {
+        "x": 6,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J6",
+      "position": Object {
+        "x": 6,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "J7",
+      "position": Object {
+        "x": 7,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J6",
+      "position": Object {
+        "x": 6,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K5",
+      "position": Object {
+        "x": 5,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J6",
+      "position": Object {
+        "x": 6,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K6",
+      "position": Object {
+        "x": 6,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J6",
+      "position": Object {
+        "x": 6,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K7",
+      "position": Object {
+        "x": 7,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J7",
+      "position": Object {
+        "x": 7,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "J8",
+      "position": Object {
+        "x": 8,
+        "y": 9,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J7",
+      "position": Object {
+        "x": 7,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K6",
+      "position": Object {
+        "x": 6,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J7",
+      "position": Object {
+        "x": 7,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K7",
+      "position": Object {
+        "x": 7,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J7",
+      "position": Object {
+        "x": 7,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K8",
+      "position": Object {
+        "x": 8,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "J8",
+      "position": Object {
+        "x": 8,
+        "y": 9,
+      },
+    },
+    Object {
+      "name": "K7",
+      "position": Object {
+        "x": 7,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K0",
+      "position": Object {
+        "x": 0,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "K1",
+      "position": Object {
+        "x": 1,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K0",
+      "position": Object {
+        "x": 0,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L1",
+      "position": Object {
+        "x": 1,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K1",
+      "position": Object {
+        "x": 1,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "K2",
+      "position": Object {
+        "x": 2,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K1",
+      "position": Object {
+        "x": 1,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L0",
+      "position": Object {
+        "x": 0,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K1",
+      "position": Object {
+        "x": 1,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L1",
+      "position": Object {
+        "x": 1,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K1",
+      "position": Object {
+        "x": 1,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L2",
+      "position": Object {
+        "x": 2,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K2",
+      "position": Object {
+        "x": 2,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "K3",
+      "position": Object {
+        "x": 3,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K2",
+      "position": Object {
+        "x": 2,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L1",
+      "position": Object {
+        "x": 1,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K2",
+      "position": Object {
+        "x": 2,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L2",
+      "position": Object {
+        "x": 2,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K2",
+      "position": Object {
+        "x": 2,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L3",
+      "position": Object {
+        "x": 3,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K3",
+      "position": Object {
+        "x": 3,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "K4",
+      "position": Object {
+        "x": 4,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K3",
+      "position": Object {
+        "x": 3,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L2",
+      "position": Object {
+        "x": 2,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K3",
+      "position": Object {
+        "x": 3,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L3",
+      "position": Object {
+        "x": 3,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K3",
+      "position": Object {
+        "x": 3,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L4",
+      "position": Object {
+        "x": 4,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K4",
+      "position": Object {
+        "x": 4,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "K5",
+      "position": Object {
+        "x": 5,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K4",
+      "position": Object {
+        "x": 4,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L3",
+      "position": Object {
+        "x": 3,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K4",
+      "position": Object {
+        "x": 4,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L4",
+      "position": Object {
+        "x": 4,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K4",
+      "position": Object {
+        "x": 4,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L5",
+      "position": Object {
+        "x": 5,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K5",
+      "position": Object {
+        "x": 5,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "K6",
+      "position": Object {
+        "x": 6,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K5",
+      "position": Object {
+        "x": 5,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L4",
+      "position": Object {
+        "x": 4,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K5",
+      "position": Object {
+        "x": 5,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L5",
+      "position": Object {
+        "x": 5,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K5",
+      "position": Object {
+        "x": 5,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L6",
+      "position": Object {
+        "x": 6,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K6",
+      "position": Object {
+        "x": 6,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "K7",
+      "position": Object {
+        "x": 7,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K6",
+      "position": Object {
+        "x": 6,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L5",
+      "position": Object {
+        "x": 5,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K6",
+      "position": Object {
+        "x": 6,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L6",
+      "position": Object {
+        "x": 6,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K6",
+      "position": Object {
+        "x": 6,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L7",
+      "position": Object {
+        "x": 7,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K7",
+      "position": Object {
+        "x": 7,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "K8",
+      "position": Object {
+        "x": 8,
+        "y": 10,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K7",
+      "position": Object {
+        "x": 7,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L6",
+      "position": Object {
+        "x": 6,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K7",
+      "position": Object {
+        "x": 7,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L7",
+      "position": Object {
+        "x": 7,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K7",
+      "position": Object {
+        "x": 7,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L8",
+      "position": Object {
+        "x": 8,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "K8",
+      "position": Object {
+        "x": 8,
+        "y": 10,
+      },
+    },
+    Object {
+      "name": "L7",
+      "position": Object {
+        "x": 7,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "L3",
+      "position": Object {
+        "x": 3,
+        "y": 11,
+      },
+    },
+    Object {
+      "name": "M4",
+      "position": Object {
+        "x": 4,
+        "y": 12,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "L3",
+      "position": Object {
+        "x": 3,
+        "y": 11,
+      },
+    },
+    Object {
+      "name": "L4",
+      "position": Object {
+        "x": 4,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "L4",
+      "position": Object {
+        "x": 4,
+        "y": 11,
+      },
+    },
+    Object {
+      "name": "M3",
+      "position": Object {
+        "x": 3,
+        "y": 12,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "L4",
+      "position": Object {
+        "x": 4,
+        "y": 11,
+      },
+    },
+    Object {
+      "name": "M4",
+      "position": Object {
+        "x": 4,
+        "y": 12,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "L4",
+      "position": Object {
+        "x": 4,
+        "y": 11,
+      },
+    },
+    Object {
+      "name": "M5",
+      "position": Object {
+        "x": 5,
+        "y": 12,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "L4",
+      "position": Object {
+        "x": 4,
+        "y": 11,
+      },
+    },
+    Object {
+      "name": "L5",
+      "position": Object {
+        "x": 5,
+        "y": 11,
+      },
+    },
+  ],
+  Array [
+    Object {
+      "name": "L5",
+      "position": Object {
+        "x": 5,
+        "y": 11,
+      },
+    },
+    Object {
+      "name": "M4",
+      "position": Object {
+        "x": 4,
+        "y": 12,
+      },
+    },
+  ],
+]
+`;
