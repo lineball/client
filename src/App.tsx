@@ -1,10 +1,15 @@
 import React, { FunctionComponent, ReactElement } from 'react';
-import './App.css';
+import Game from './game/Game';
+import { AppContainer } from './styles';
+import { Provider } from 'react-redux';
+import store from './store';
 
 const App: FunctionComponent = (): ReactElement => (
-  <div className="App">
-    <header className="App-header">Lineball</header>
-  </div>
+  <Provider store={store}>
+    <AppContainer>
+      <Game />
+    </AppContainer>
+  </Provider>
 );
 
 export default App;
