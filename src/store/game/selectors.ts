@@ -3,7 +3,8 @@ import { Field } from '../../game/def';
 import { createSelector } from 'reselect';
 import { difference } from 'lodash';
 
-const getMoves = (state: GameState) => state.moves;
+export const getMoves = (state: GameState) =>
+  state.turns.flatMap(turn => turn.moves);
 const getFields = (state: GameState) => state.fields;
 const getPaths = (state: GameState) => state.paths;
 const getTurns = (state: GameState) => state.turns;
@@ -40,7 +41,7 @@ export const getCurrentTurn = createSelector(
   }
 );
 
-export const getPossibleFields = createSelector(
+export const getPossibleMoveFields = createSelector(
   [getMoves, getCurrentField, getPaths],
   (moves, currentField, paths) => {
     const usedPathsWithCurrentField = moves

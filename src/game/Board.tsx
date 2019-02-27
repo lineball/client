@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Store } from '../store';
 import { Move, Size } from './def';
 import { getSVGPosition } from './util';
+import { getMoves } from '../store/game/selectors';
 
 interface Props {
   size: Size;
@@ -76,13 +77,14 @@ const Board = (props: Props) => {
   );
 };
 
-const mapStateToProps = ({
-  game: { fields, moves, size, borders }
-}: Store) => ({
-  fields,
-  moves,
-  size,
-  borders
-});
+const mapStateToProps = ({ game }: Store) => {
+  const { fields, size, borders } = game;
+  return {
+    fields,
+    moves: getMoves(game),
+    size,
+    borders
+  };
+};
 
 export default connect(mapStateToProps)(Board);

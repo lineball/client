@@ -5,7 +5,10 @@ import { Dispatch } from 'redux';
 import { addMove } from '../store/game/actions';
 import { Field, Position } from './def';
 import { getSVGPosition } from './util';
-import { getCurrentField, getPossibleFields } from '../store/game/selectors';
+import {
+  getCurrentField,
+  getPossibleMoveFields
+} from '../store/game/selectors';
 
 interface Props {
   position: Position;
@@ -66,7 +69,7 @@ const Dot = (props: Props) => {
 
 const mapStateToProps = ({ game }: Store, props: Props) => ({
   current: getCurrentField(game),
-  isValidMove: getPossibleFields(game).includes(props.field)
+  isValidMove: getPossibleMoveFields(game).includes(props.field)
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({

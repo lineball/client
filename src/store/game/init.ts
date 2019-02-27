@@ -66,7 +66,7 @@ const initBordersAndPaths = (fields: Field[]): [Path[], Path[]] =>
 const initTurns = () => [
   {
     player: Player.WHITE,
-    moves: [] as Move[]
+    moves: []
   }
 ];
 
@@ -77,7 +77,6 @@ const initState = (): GameState => {
     fields,
     paths,
     borders,
-    moves: [],
     turns: initTurns(),
     size: {
       x: 9,

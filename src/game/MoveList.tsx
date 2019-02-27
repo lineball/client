@@ -4,14 +4,16 @@ import { connect } from 'react-redux';
 import { Move } from './def';
 import { getKeyFromPath } from './util';
 import { Dispatch } from 'redux';
-import { revertMove } from '../store/game/actions';
+import { revertMove, revertTurn } from '../store/game/actions';
+import { getMoves } from '../store/game/selectors';
 
 interface Props {
   moves: Array<Move>;
   revertMove: () => void;
+  revertTurn: () => void;
 }
 
-const MoveList = ({ moves, revertMove }: Props) => (
+const MoveList = ({ moves, revertMove, revertTurn }: Props) => (
   <>
     <h3>Moves</h3>
     <button
@@ -19,7 +21,14 @@ const MoveList = ({ moves, revertMove }: Props) => (
         revertMove();
       }}
     >
-      revert
+      revert move
+    </button>
+    <button
+      onClick={() => {
+        revertTurn();
+      }}
+    >
+      revert turn
     </button>
     <ul>
       {moves.map(move => (
@@ -29,12 +38,13 @@ const MoveList = ({ moves, revertMove }: Props) => (
   </>
 );
 
-const mapStateToProps = (state: Store) => ({
-  moves: state.game.moves
+const mapStateToProps = ({ game }: Store) => ({
+  moves: getMoves(game)
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-  revertMove: () => dispatch(revertMove())
+  revertMove: () => dispatch(revertMove()),
+  revertTurn: () => dispatch(revertTurn())
 });
 
 export default connect(
