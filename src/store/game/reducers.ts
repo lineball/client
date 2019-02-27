@@ -1,6 +1,14 @@
 import { ADD_MOVE, REVERT_MOVE } from './actions';
 import { Action } from '../index';
-import { Field, Move, Path, Player, Position, Size } from '../../game/def';
+import {
+  Field,
+  Move,
+  Path,
+  Player,
+  Position,
+  Size,
+  Turn
+} from '../../game/def';
 import { initialState } from './init';
 import { getCurrentField } from './selectors';
 import { getKeyFromPath } from '../../game/util';
@@ -11,6 +19,7 @@ export interface GameState {
   paths: Path[];
   borders: Path[];
   moves: Move[];
+  turns: Turn[];
 }
 
 export default (state: GameState = initialState, action: Action): GameState => {
@@ -29,7 +38,7 @@ export default (state: GameState = initialState, action: Action): GameState => {
       const direction = path[0] === field ? 0 : 1;
       return {
         ...state,
-        moves: [...state.moves, { path, direction, player: Player.BLACK }]
+        moves: [...state.moves, { path, direction }]
       };
     }
     case REVERT_MOVE: {

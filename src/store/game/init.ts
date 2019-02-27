@@ -1,6 +1,6 @@
 import { GameState } from './reducers';
 import { flatMap, partition, range } from 'lodash';
-import { Field, Path, Position } from '../../game/def';
+import { Field, Move, Path, Player, Position, Turn } from '../../game/def';
 import { getKeyFromPath } from '../../game/util';
 
 const getField = ({ x, y }: Position) => ({
@@ -55,14 +55,20 @@ const initBordersAndPaths = (fields: Field[]): [Path[], Path[]] =>
             maybeNearest.name !== field.name &&
             !isBehindGatePath([field, maybeNearest])
         );
-        return nearestFieldsWithGreaterPosition.map(nearestField => {
-          const path: Path = [field, nearestField];
-          return path;
-        });
+        return nearestFieldsWithGreaterPosition.map(
+          nearestField => [field, nearestField] as Path
+        );
       })
     ),
     ([a, b]) => isBorder([a.position, b.position])
   );
+
+const initTurns = () => [
+  {
+    player: Player.WHITE,
+    moves: [] as Move[]
+  }
+];
 
 const initState = (): GameState => {
   const fields = initFields();
@@ -72,6 +78,7 @@ const initState = (): GameState => {
     paths,
     borders,
     moves: [],
+    turns: initTurns(),
     size: {
       x: 9,
       y: 12

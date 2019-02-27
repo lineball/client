@@ -6,6 +6,7 @@ import { difference } from 'lodash';
 const getMoves = (state: GameState) => state.moves;
 const getFields = (state: GameState) => state.fields;
 const getPaths = (state: GameState) => state.paths;
+const getTurns = (state: GameState) => state.turns;
 
 export const getCurrentField = createSelector(
   [getMoves, getFields],
@@ -26,6 +27,16 @@ export const getCurrentField = createSelector(
 
     const lastMove = moves[moves.length - 1];
     return lastMove.path[lastMove.direction];
+  }
+);
+
+export const getCurrentTurn = createSelector(
+  [getTurns],
+  turns => {
+    if (!turns.length) {
+      throw new Error('Error getting current turn');
+    }
+    return turns[turns.length - 1];
   }
 );
 

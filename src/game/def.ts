@@ -25,5 +25,9 @@ export enum Player {
 export interface Move {
   path: Path;
   direction: 0 | 1;
+}
+
+export interface Turn {
   player: Player;
+  moves: Move[];
 }
