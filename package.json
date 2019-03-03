@@ -7,7 +7,6 @@
     "@types/node": "11.9.4",
     "@types/react": "16.8.3",
     "@types/react-dom": "16.8.2",
-    "@types/redux": "^3.6.0",
     "lodash": "latest",
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
