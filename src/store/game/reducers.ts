@@ -1,6 +1,6 @@
-import { ADD_MOVE, REVERT_MOVE, REVERT_TURN } from './actions';
+import { ADD_MOVE, AddMoveAction, REVERT_MOVE, REVERT_TURN } from './actions';
 import { Action } from '../index';
-import { Field, Move, Path, Player, Size, Turn } from '../../game/def';
+import { Field, Path, Player, Size, Turn } from '../../game/def';
 import { initialState } from './init';
 import { getCurrentField, getCurrentTurn } from './selectors';
 
@@ -15,7 +15,7 @@ export interface GameState {
 export default (state: GameState = initialState, action: Action): GameState => {
   switch (action.type) {
     case ADD_MOVE: {
-      const { payload: field } = action;
+      const { payload: field } = action as AddMoveAction;
       const currentField = getCurrentField(state);
       const path = state.paths.find(f => f.includes(field) && f.includes(currentField));
       if (!path) {
@@ -33,8 +33,6 @@ export default (state: GameState = initialState, action: Action): GameState => {
         .concat(state.borders)
         .filter((p: Path) => p.includes(field))
         .map((p: Path) => p).length;
-
-      console.log({ isSameTurn });
 
       if (isSameTurn) {
         return {
@@ -54,8 +52,6 @@ export default (state: GameState = initialState, action: Action): GameState => {
     case REVERT_MOVE: {
       const lastTurn = state.turns[state.turns.length - 1];
       if (lastTurn.moves.length > 0) {
-        console.log('reverting move');
-        /* same turn - revert last move */
         return {
           ...state,
           turns: [

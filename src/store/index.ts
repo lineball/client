@@ -9,7 +9,6 @@ export interface Store extends ReduxStore {
 
 export interface Action extends ReduxAction {
   type: string;
-  payload: any;
 }
 
 const reducers = combineReducers({

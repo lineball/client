@@ -1,12 +1,12 @@
 import { GameState } from './reducers';
-import { Field, Path } from '../../game/def';
+import { Field, Move, Path, Turn } from '../../game/def';
 import { createSelector } from 'reselect';
 import { difference } from 'lodash';
 
-export const getMoves = (state: GameState) => state.turns.flatMap(turn => turn.moves);
-const getFields = (state: GameState) => state.fields;
-const getPaths = (state: GameState) => state.paths;
-const getTurns = (state: GameState) => state.turns;
+export const getMoves = (state: GameState): Move[] => state.turns.flatMap(turn => turn.moves);
+const getFields = (state: GameState): Field[] => state.fields;
+const getPaths = (state: GameState): Path[] => state.paths;
+const getTurns = (state: GameState): Turn[] => state.turns;
 
 export const getCurrentField = createSelector(
   [getMoves, getFields],

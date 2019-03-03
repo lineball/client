@@ -1,20 +1,20 @@
 import { GameState } from './reducers';
 import { flatMap, partition, range } from 'lodash';
-import { Field, Move, Path, Player, Position, Turn } from '../../game/def';
+import { Field, Path, Player, Position, Turn } from '../../game/def';
 import { getKeyFromPath } from '../../game/util';
 
-const getField = ({ x, y }: Position) => ({
+const initField = ({ x, y }: Position): Field => ({
   name: `${String.fromCharCode(65 + y)}${x}`,
   position: { x, y }
 });
 
-const initFields = () =>
+const initFields = (): Field[] =>
   flatMap([
-    ...[0, 12].map(y => range(3, 6).map(x => getField({ x, y }))),
-    ...range(1, 12).map(y => range(0, 9).map(x => getField({ x, y })))
+    ...[0, 12].map(y => range(3, 6).map(x => initField({ x, y }))),
+    ...range(1, 12).map(y => range(0, 9).map(x => initField({ x, y })))
   ]);
 
-const isBorder = ([a, b]: [Position, Position]) => {
+const isBorder = ([a, b]: [Position, Position]): boolean => {
   // horizontal
   if (a.y === b.y) {
     if ([0, 12].includes(a.y)) {
@@ -59,7 +59,7 @@ const initBordersAndPaths = (fields: Field[]): [Path[], Path[]] =>
     ([a, b]) => isBorder([a.position, b.position])
   );
 
-const initTurns = () => [
+const initTurns = (): Turn[] => [
   {
     player: Player.WHITE,
     moves: []
@@ -82,7 +82,7 @@ const initState = (): GameState => {
 };
 export const initialState: GameState = initState();
 
-export const tests = {
+export const testOnly = {
   initState,
   initFields,
   initBordersAndPaths

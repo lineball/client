@@ -1,30 +1,34 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, ReactElement } from 'react';
 import Dot from './Dot';
 import { connect } from 'react-redux';
 import { Store } from '../store';
-import { Field, Move, Path, Size } from './def';
+import { Field, Move, Path, Player, Size, Turn } from './def';
 import { getKeyFromPath } from './util';
-import { getMoves } from '../store/game/selectors';
-import Line from './Line';
+import { getCurrentTurn, getMoves } from '../store/game/selectors';
+import Line from './svg/Line';
 
-interface Props {
+interface StateProps {
   size: Size;
-  fields: any[];
-  moves: any[];
-  borders: any[];
+  fields: Field[];
+  moves: Move[];
+  borders: Path[];
+  currentTurn: Turn;
 }
 
-const Board: FunctionComponent<Props> = (props: Props) => {
+type Props = StateProps;
+
+const Board: FunctionComponent<Props> = (props: Props): ReactElement => {
   const {
     fields,
     moves,
     size: { x, y },
-    borders
+    borders,
+    currentTurn
   } = props;
   return (
     <svg width={50 * x} height={50 * (y + 1)} viewBox={`0 0 ${10 * x} ${10 * y}`}>
       {borders.map(border => (
-        <Line key={getKeyFromPath(border)} path={border} color="blue" />
+        <Line key={getKeyFromPath(border)} path={border} color={currentTurn.player === Player.WHITE ? 'blue' : 'red'} />
       ))}
       {moves.map(({ path }) => (
         <Line key={getKeyFromPath(path)} path={path} />
@@ -36,13 +40,14 @@ const Board: FunctionComponent<Props> = (props: Props) => {
   );
 };
 
-const mapStateToProps = ({ game }: Store) => {
+const mapStateToProps = ({ game }: Store): StateProps => {
   const { fields, size, borders } = game;
   return {
     fields,
     moves: getMoves(game),
     size,
-    borders
+    borders,
+    currentTurn: getCurrentTurn(game)
   };
 };
 

@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent, ReactElement, useState } from 'react';
 import { Store } from '../store';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
@@ -6,20 +6,34 @@ import { addMove as addMoveAction } from '../store/game/actions';
 import { Field, Position } from './def';
 import { getSVGPosition } from './util';
 import { getCurrentField, getPossibleMoveFields } from '../store/game/selectors';
+import Line from './svg/Line';
 
-interface Props {
+interface ComponentProps {
   position: Position;
-  current: Field;
-  addMove: (field: Field) => void;
   field: Field;
-  isValidMove: boolean;
 }
 
-const Dot: FunctionComponent<Props> = ({ position: { x, y }, current, addMove, field, isValidMove }: Props) => {
+interface StateProps {
+  isValidMove: boolean;
+  current: Field;
+}
+
+interface DispatchProps {
+  addMove: (field: Field) => void;
+}
+
+type Props = ComponentProps & StateProps & DispatchProps;
+
+const Dot: FunctionComponent<Props> = ({
+  position: { x, y },
+  current,
+  addMove,
+  field,
+  isValidMove
+}: Props): ReactElement => {
   const [hover, setHover] = useState(false);
-  const isCurrent = current.position.x === x && current.position.y === y;
+  const isCurrent = current === field;
   const { x: svgX, y: svgY } = getSVGPosition({ x, y });
-  const { x: svgCX, y: svgCY } = getSVGPosition(current.position);
   return (
     <>
       {isValidMove && (
@@ -43,17 +57,17 @@ const Dot: FunctionComponent<Props> = ({ position: { x, y }, current, addMove, f
         r={hover || isCurrent ? '2' : '0.5'}
         fill={isCurrent ? 'red' : 'white'}
       />
-      {hover && isValidMove && <line pointerEvents="none" x1={svgCX} y1={svgCY} x2={svgX} y2={svgY} stroke="pink" />}
+      {hover && isValidMove && <Line path={[current, field]} />}
     </>
   );
 };
 
-const mapStateToProps = ({ game }: Store, props: Props) => ({
+const mapStateToProps = ({ game }: Store, { field }: { field: Field }): StateProps => ({
   current: getCurrentField(game),
-  isValidMove: getPossibleMoveFields(game).includes(props.field)
+  isValidMove: getPossibleMoveFields(game).includes(field)
 });
 
-const mapDispatchToProps = (dispatch: Dispatch) => ({
+const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
   addMove: (field: Field) => dispatch(addMoveAction(field))
 });
 

@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { FunctionComponent, ReactElement } from 'react';
 import { connect } from 'react-redux';
 import { Store } from '../store';
 import { getCurrentTurn } from '../store/game/selectors';
 import { Turn } from './def';
 
-interface Props {
+interface StateProps {
   turn: Turn;
 }
 
-const TurnInfo = ({ turn: { player, moves } }: Props) => (
+const TurnInfo: FunctionComponent<StateProps> = ({ turn: { player, moves } }: StateProps): ReactElement => (
   <>
     <h3>Turn</h3>
     <p>player: {player}</p>
@@ -16,7 +16,7 @@ const TurnInfo = ({ turn: { player, moves } }: Props) => (
   </>
 );
 
-const mapStateToProps = ({ game }: Store) => ({
+const mapStateToProps = ({ game }: Store): StateProps => ({
   turn: getCurrentTurn(game)
 });
 

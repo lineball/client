@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { FunctionComponent, ReactElement } from 'react';
 import Board from './Board';
 import MoveList from './MoveList';
 import TurnInfo from './TurnInfo';
 
-const Game = () => {
+const Game: FunctionComponent<{}> = (): ReactElement => {
   return (
     <>
       <Board />

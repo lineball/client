@@ -26,7 +26,6 @@
     "@typescript-eslint/parser": "^1.3.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.0.0",
-    "eslint-config-react-app": "^3.0.7",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jest": "^22.3.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
@@ -66,7 +65,6 @@
     },
     "extends": [
       "airbnb",
-      "react-app",
       "plugin:@typescript-eslint/recommended",
       "prettier/@typescript-eslint",
       "plugin:prettier/recommended",
@@ -91,6 +89,12 @@
       "import/no-useless-path-segments": "off",
       "import/no-named-as-default": "off",
       "import/named": "off"
+    },
+    "globals": {
+      "it": true,
+      "expect": true,
+      "describe": true,
+      "document": true
     }
   },
   "prettier": {

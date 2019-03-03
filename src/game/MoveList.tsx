@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FunctionComponent, ReactElement } from 'react';
 import { Store } from '../store';
 import { connect } from 'react-redux';
 import { Move, Turn } from './def';
@@ -7,14 +7,19 @@ import { Dispatch } from 'redux';
 import { revertMove as revertMoveAction, revertTurn as revertTurnAction } from '../store/game/actions';
 import { getCurrentTurn, getMoves } from '../store/game/selectors';
 
-interface Props {
+interface StateProps {
   moves: Move[];
-  revertMove: () => void;
-  revertTurn: () => void;
   turn: Turn;
 }
 
-const MoveList = ({ moves, revertMove, revertTurn, turn }: Props) => (
+interface DispatchProps {
+  revertMove: () => void;
+  revertTurn: () => void;
+}
+
+type Props = StateProps & DispatchProps;
+
+const MoveList: FunctionComponent<Props> = ({ moves, revertMove, revertTurn, turn }: Props): ReactElement => (
   <>
     <h3>Moves</h3>
     {turn.moves.length ? (
@@ -46,12 +51,12 @@ const MoveList = ({ moves, revertMove, revertTurn, turn }: Props) => (
   </>
 );
 
-const mapStateToProps = ({ game }: Store) => ({
+const mapStateToProps = ({ game }: Store): StateProps => ({
   moves: getMoves(game),
   turn: getCurrentTurn(game)
 });
 
-const mapDispatchToProps = (dispatch: Dispatch) => ({
+const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
   revertMove: () => dispatch(revertMoveAction()),
   revertTurn: () => dispatch(revertTurnAction())
 });
