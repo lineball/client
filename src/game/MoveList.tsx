@@ -1,35 +1,41 @@
 import React from 'react';
 import { Store } from '../store';
 import { connect } from 'react-redux';
-import { Move } from './def';
+import { Move, Turn } from './def';
 import { getKeyFromPath } from './util';
 import { Dispatch } from 'redux';
 import { revertMove, revertTurn } from '../store/game/actions';
-import { getMoves } from '../store/game/selectors';
+import { getCurrentTurn, getMoves } from '../store/game/selectors';
 
 interface Props {
   moves: Array<Move>;
   revertMove: () => void;
   revertTurn: () => void;
+  turn: Turn;
 }
 
-const MoveList = ({ moves, revertMove, revertTurn }: Props) => (
+const MoveList = ({ moves, revertMove, revertTurn, turn }: Props) => (
   <>
     <h3>Moves</h3>
-    <button
-      onClick={() => {
-        revertMove();
-      }}
-    >
-      revert move
-    </button>
-    <button
-      onClick={() => {
-        revertTurn();
-      }}
-    >
-      revert turn
-    </button>
+    {turn.moves.length ? (
+      <button
+        onClick={() => {
+          revertMove();
+        }}
+      >
+        revert move
+      </button>
+    ) : (
+      moves.length && (
+        <button
+          onClick={() => {
+            revertTurn();
+          }}
+        >
+          revert turn
+        </button>
+      )
+    )}
     <ul>
       {moves.map(move => (
         <li key={getKeyFromPath(move.path)}>{JSON.stringify(move)}</li>
@@ -39,7 +45,8 @@ const MoveList = ({ moves, revertMove, revertTurn }: Props) => (
 );
 
 const mapStateToProps = ({ game }: Store) => ({
-  moves: getMoves(game)
+  moves: getMoves(game),
+  turn: getCurrentTurn(game)
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({

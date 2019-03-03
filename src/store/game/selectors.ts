@@ -1,10 +1,9 @@
 import { GameState } from './reducers';
-import { Field } from '../../game/def';
+import { Field, Path } from '../../game/def';
 import { createSelector } from 'reselect';
 import { difference } from 'lodash';
 
-export const getMoves = (state: GameState) =>
-  state.turns.flatMap(turn => turn.moves);
+export const getMoves = (state: GameState) => state.turns.flatMap(turn => turn.moves);
 const getFields = (state: GameState) => state.fields;
 const getPaths = (state: GameState) => state.paths;
 const getTurns = (state: GameState) => state.turns;
@@ -41,18 +40,21 @@ export const getCurrentTurn = createSelector(
   }
 );
 
-export const getPossibleMoveFields = createSelector(
-  [getMoves, getCurrentField, getPaths],
-  (moves, currentField, paths) => {
-    const usedPathsWithCurrentField = moves
-      .filter(({ path }) => path.includes(currentField))
-      .map(({ path }) => path);
-    const allPathsWithCurrentField = paths.filter(f =>
-      f.includes(currentField)
-    );
+export const getAllPathsWithCurrentField = createSelector(
+  [getCurrentField, getPaths],
+  (currentField, paths) => paths.filter(f => f.includes(currentField))
+);
 
-    return difference(allPathsWithCurrentField, usedPathsWithCurrentField).map(
-      ([a, b]) => (a === currentField ? b : a)
+export const getUsedPathsWithCurrentField = createSelector(
+  [getMoves, getCurrentField],
+  (moves, currentField) => moves.filter(({ path }) => path.includes(currentField)).map(({ path }) => path)
+);
+
+export const getPossibleMoveFields = createSelector(
+  [getCurrentField, getAllPathsWithCurrentField, getUsedPathsWithCurrentField],
+  (currentField, allPathsWithCurrentField, usedPathsWithCurrentField) => {
+    return difference(allPathsWithCurrentField, usedPathsWithCurrentField).map(([a, b]) =>
+      a === currentField ? b : a
     );
   }
 );

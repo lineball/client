@@ -3,8 +3,9 @@ import Dot from './Dot';
 import { connect } from 'react-redux';
 import { Store } from '../store';
 import { Move, Size } from './def';
-import { getSVGPosition } from './util';
+import { getKeyFromPath, getSVGPosition } from './util';
 import { getMoves } from '../store/game/selectors';
+import Line from './Line';
 
 interface Props {
   size: Size;
@@ -21,57 +22,15 @@ const Board = (props: Props) => {
     borders
   } = props;
   return (
-    <svg
-      width={50 * x}
-      height={50 * (y + 1)}
-      viewBox={`0 0 ${10 * x} ${10 * y}`}
-    >
-      {borders.map(border => {
-        const { x: x1, y: y1 } = getSVGPosition(border[0].position);
-        const { x: x2, y: y2 } = getSVGPosition(border[1].position);
-        return (
-          <line
-            key={`
-              ${x1}
-              ${y1}
-              ${x2}
-              ${y2}
-            `}
-            pointerEvents="none"
-            x1={x1}
-            y1={y1}
-            x2={x2}
-            y2={y2}
-            stroke="blue"
-          />
-        );
-      })}
-      {moves.map((move: Move) => {
-        const { x: x1, y: y1 } = getSVGPosition(move.path[0].position);
-        const { x: x2, y: y2 } = getSVGPosition(move.path[1].position);
-        return (
-          <line
-            key={`
-              ${x1}
-              ${y1}
-              ${x2}
-              ${y2}
-            `}
-            pointerEvents="none"
-            x1={x1}
-            y1={y1}
-            x2={x2}
-            y2={y2}
-            stroke="white"
-          />
-        );
-      })}
+    <svg width={50 * x} height={50 * (y + 1)} viewBox={`0 0 ${10 * x} ${10 * y}`}>
+      {borders.map(border => (
+        <Line key={getKeyFromPath(border)} path={border} color="blue" />
+      ))}
+      {moves.map(({ path }) => (
+        <Line key={getKeyFromPath(path)} path={path} />
+      ))}
       {fields.map(field => (
-        <Dot
-          {...field}
-          key={`${field.position.x}_${field.position.y}`}
-          field={field}
-        />
+        <Dot {...field} key={`${field.position.x}_${field.position.y}`} field={field} />
       ))}
     </svg>
   );

@@ -1,9 +1,8 @@
 import { ADD_MOVE, REVERT_MOVE, REVERT_TURN } from './actions';
 import { Action } from '../index';
-import { Field, Move, Path, Size, Turn } from '../../game/def';
+import { Field, Move, Path, Player, Size, Turn } from '../../game/def';
 import { initialState } from './init';
-import { getCurrentField } from './selectors';
-import { getKeyFromPath } from '../../game/util';
+import { getCurrentField, getCurrentTurn, getUsedPathsWithCurrentField } from './selectors';
 
 export interface GameState {
   fields: Field[];
@@ -14,40 +13,49 @@ export interface GameState {
 }
 
 export default (state: GameState = initialState, action: Action): GameState => {
-  // noinspection FallThroughInSwitchStatementJS
   switch (action.type) {
     case ADD_MOVE: {
       const { payload: field } = action;
       const currentField = getCurrentField(state);
-      const path = state.paths.find(
-        f => f.includes(field) && f.includes(currentField)
-      );
-
+      const path = state.paths.find(f => f.includes(field) && f.includes(currentField));
       if (!path) {
         throw new Error('Path not found!');
       }
-      console.log(getKeyFromPath(path));
       const direction = path[0] === field ? 0 : 1;
-
-      //same turn
-
-      return {
-        ...state,
-        turns: [
-          ...state.turns.slice(0, -1),
-          {
-            ...state.turns[state.turns.length - 1],
-            moves: [
-              ...state.turns[state.turns.length - 1].moves,
-              { path, direction } as Move
-            ]
-          }
-        ]
+      const thisTurn: Turn = {
+        ...state.turns[state.turns.length - 1],
+        moves: [...state.turns[state.turns.length - 1].moves, { path, direction } as Move]
       };
+      //is same turn
+      const isSameTurn = !!state.turns
+        .flatMap(turn => turn.moves)
+        .map(move => move.path)
+        .concat(state.borders)
+        .filter(path => path.includes(field))
+        .map(path => path).length;
+
+      console.log({ isSameTurn });
+
+      if (isSameTurn) {
+        return {
+          ...state,
+          turns: [...state.turns.slice(0, -1), thisTurn]
+        };
+      } else {
+        const nextTurn: Turn = {
+          moves: [],
+          player: getCurrentTurn(state).player === Player.WHITE ? Player.BLACK : Player.WHITE
+        };
+        return {
+          ...state,
+          turns: [...state.turns.slice(0, -1), thisTurn, nextTurn]
+        };
+      }
     }
     case REVERT_MOVE: {
       const lastTurn = state.turns[state.turns.length - 1];
-      if (lastTurn.moves.length) {
+      if (lastTurn.moves.length > 0) {
+        console.log('reverting move');
         /* same turn - revert last move */
         return {
           ...state,
@@ -60,16 +68,33 @@ export default (state: GameState = initialState, action: Action): GameState => {
           ]
         };
       }
-      //fallback
+      return {
+        ...state
+      };
     }
     case REVERT_TURN: {
-      if (state.turns.length > 1) {
+      if (state.turns.length > 2) {
+        const currentTurn = state.turns[state.turns.length - 1];
+        if (currentTurn.moves.length > 0) {
+          return {
+            ...state
+          };
+        }
         return {
           ...state,
-          turns: [...state.turns.slice(0, -1)]
+          turns: [...state.turns.slice(0, -2)]
+        };
+      } else {
+        return {
+          ...state,
+          turns: [
+            {
+              player: Player.WHITE,
+              moves: []
+            }
+          ]
         };
       }
-      //fallback
     }
     default: {
       return state;
