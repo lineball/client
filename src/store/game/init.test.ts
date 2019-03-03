@@ -1,6 +1,6 @@
-import { _test_ } from './init';
+import { tests } from './init';
 
-const { initFields, initBordersAndPaths, initState } = _test_;
+const { initFields, initBordersAndPaths, initState } = tests;
 
 describe('Field initialization tests', () => {
   it('snapshot tests', () => {

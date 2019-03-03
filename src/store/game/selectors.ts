@@ -17,7 +17,8 @@ export const getCurrentField = createSelector(
         throw new Error('Problem with getting last field');
       }
       return find;
-    } else if (moves.length === 1) {
+    }
+    if (moves.length === 1) {
       const find = fields.find(f => f.position.x === 4 && f.position.y === 6);
       if (!find) {
         throw new Error('Problem with getting last field');

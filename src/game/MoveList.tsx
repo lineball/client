@@ -4,11 +4,11 @@ import { connect } from 'react-redux';
 import { Move, Turn } from './def';
 import { getKeyFromPath } from './util';
 import { Dispatch } from 'redux';
-import { revertMove, revertTurn } from '../store/game/actions';
+import { revertMove as revertMoveAction, revertTurn as revertTurnAction } from '../store/game/actions';
 import { getCurrentTurn, getMoves } from '../store/game/selectors';
 
 interface Props {
-  moves: Array<Move>;
+  moves: Move[];
   revertMove: () => void;
   revertTurn: () => void;
   turn: Turn;
@@ -19,6 +19,7 @@ const MoveList = ({ moves, revertMove, revertTurn, turn }: Props) => (
     <h3>Moves</h3>
     {turn.moves.length ? (
       <button
+        type="button"
         onClick={() => {
           revertMove();
         }}
@@ -28,6 +29,7 @@ const MoveList = ({ moves, revertMove, revertTurn, turn }: Props) => (
     ) : (
       moves.length && (
         <button
+          type="button"
           onClick={() => {
             revertTurn();
           }}
@@ -50,8 +52,8 @@ const mapStateToProps = ({ game }: Store) => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-  revertMove: () => dispatch(revertMove()),
-  revertTurn: () => dispatch(revertTurn())
+  revertMove: () => dispatch(revertMoveAction()),
+  revertTurn: () => dispatch(revertTurnAction())
 });
 
 export default connect(

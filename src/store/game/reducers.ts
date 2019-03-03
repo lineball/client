@@ -2,7 +2,7 @@ import { ADD_MOVE, REVERT_MOVE, REVERT_TURN } from './actions';
 import { Action } from '../index';
 import { Field, Move, Path, Player, Size, Turn } from '../../game/def';
 import { initialState } from './init';
-import { getCurrentField, getCurrentTurn, getUsedPathsWithCurrentField } from './selectors';
+import { getCurrentField, getCurrentTurn } from './selectors';
 
 export interface GameState {
   fields: Field[];
@@ -24,15 +24,15 @@ export default (state: GameState = initialState, action: Action): GameState => {
       const direction = path[0] === field ? 0 : 1;
       const thisTurn: Turn = {
         ...state.turns[state.turns.length - 1],
-        moves: [...state.turns[state.turns.length - 1].moves, { path, direction } as Move]
+        moves: [...state.turns[state.turns.length - 1].moves, { path, direction }]
       };
-      //is same turn
+      // is same turn
       const isSameTurn = !!state.turns
         .flatMap(turn => turn.moves)
         .map(move => move.path)
         .concat(state.borders)
-        .filter(path => path.includes(field))
-        .map(path => path).length;
+        .filter((p: Path) => p.includes(field))
+        .map((p: Path) => p).length;
 
       console.log({ isSameTurn });
 
@@ -41,16 +41,15 @@ export default (state: GameState = initialState, action: Action): GameState => {
           ...state,
           turns: [...state.turns.slice(0, -1), thisTurn]
         };
-      } else {
-        const nextTurn: Turn = {
-          moves: [],
-          player: getCurrentTurn(state).player === Player.WHITE ? Player.BLACK : Player.WHITE
-        };
-        return {
-          ...state,
-          turns: [...state.turns.slice(0, -1), thisTurn, nextTurn]
-        };
       }
+      const nextTurn: Turn = {
+        moves: [],
+        player: getCurrentTurn(state).player === Player.WHITE ? Player.BLACK : Player.WHITE
+      };
+      return {
+        ...state,
+        turns: [...state.turns.slice(0, -1), thisTurn, nextTurn]
+      };
     }
     case REVERT_MOVE: {
       const lastTurn = state.turns[state.turns.length - 1];
@@ -63,7 +62,7 @@ export default (state: GameState = initialState, action: Action): GameState => {
             ...state.turns.slice(0, -1),
             {
               ...lastTurn,
-              moves: [...state.turns[state.turns.length - 1].moves.slice(0, -1)]
+              moves: [...lastTurn.moves.slice(0, -1)]
             }
           ]
         };
@@ -80,21 +79,27 @@ export default (state: GameState = initialState, action: Action): GameState => {
             ...state
           };
         }
-        return {
-          ...state,
-          turns: [...state.turns.slice(0, -2)]
-        };
-      } else {
+        const prevTurn = state.turns[state.turns.length - 2];
         return {
           ...state,
           turns: [
+            ...state.turns.slice(0, -2),
             {
-              player: Player.WHITE,
+              ...prevTurn,
               moves: []
             }
           ]
         };
       }
+      return {
+        ...state,
+        turns: [
+          {
+            player: Player.WHITE,
+            moves: []
+          }
+        ]
+      };
     }
     default: {
       return state;

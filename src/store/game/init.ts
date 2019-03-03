@@ -15,7 +15,7 @@ const initFields = () =>
   ]);
 
 const isBorder = ([a, b]: [Position, Position]) => {
-  //horizontal
+  // horizontal
   if (a.y === b.y) {
     if ([0, 12].includes(a.y)) {
       return true;
@@ -24,7 +24,7 @@ const isBorder = ([a, b]: [Position, Position]) => {
       return true;
     }
   }
-  //vertical
+  // vertical
   else if (a.x === b.x) {
     if ([0, 8].includes(a.x)) {
       return true;
@@ -48,16 +48,12 @@ const initBordersAndPaths = (fields: Field[]): [Path[], Path[]] =>
         const { x, y } = field.position;
         const nearestFieldsWithGreaterPosition = fields.filter(
           maybeNearest =>
-            (([x, x + 1].includes(maybeNearest.position.x) &&
-              [y, y + 1].includes(maybeNearest.position.y)) ||
-              (maybeNearest.position.x === x - 1 &&
-                maybeNearest.position.y === y + 1)) &&
+            (([x, x + 1].includes(maybeNearest.position.x) && [y, y + 1].includes(maybeNearest.position.y)) ||
+              (maybeNearest.position.x === x - 1 && maybeNearest.position.y === y + 1)) &&
             maybeNearest.name !== field.name &&
             !isBehindGatePath([field, maybeNearest])
         );
-        return nearestFieldsWithGreaterPosition.map(
-          nearestField => [field, nearestField] as Path
-        );
+        return nearestFieldsWithGreaterPosition.map(nearestField => [field, nearestField] as Path);
       })
     ),
     ([a, b]) => isBorder([a.position, b.position])
@@ -86,7 +82,7 @@ const initState = (): GameState => {
 };
 export const initialState: GameState = initState();
 
-export const _test_ = {
+export const tests = {
   initState,
   initFields,
   initBordersAndPaths

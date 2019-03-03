@@ -1,9 +1,4 @@
-import {
-  Action as ReduxAction,
-  combineReducers,
-  createStore,
-  Store as ReduxStore
-} from 'redux';
+import { Action as ReduxAction, combineReducers, createStore, Store as ReduxStore } from 'redux';
 import game, { GameState } from './game/reducers';
 
 import { devToolsEnhancer } from 'redux-devtools-extension';
@@ -13,7 +8,7 @@ export interface Store extends ReduxStore {
 }
 
 export interface Action extends ReduxAction {
-  type: String;
+  type: string;
   payload: any;
 }
 

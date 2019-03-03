@@ -1,4 +1,5 @@
 import { Field } from '../../game/def';
+
 export const REVERT_MOVE = '@lineball/REVERT_MOVE';
 export const REVERT_TURN = '@lineball/REVERT_TURN';
 export const ADD_MOVE = '@lineball/ADD_MOVE';

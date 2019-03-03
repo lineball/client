@@ -11,7 +11,7 @@ export interface Position {
 }
 
 export interface Field {
-  name: String;
+  name: string;
   position: Position;
 }
 

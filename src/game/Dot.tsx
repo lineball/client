@@ -1,14 +1,11 @@
-import React, { useState } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import { Store } from '../store';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
-import { addMove } from '../store/game/actions';
+import { addMove as addMoveAction } from '../store/game/actions';
 import { Field, Position } from './def';
 import { getSVGPosition } from './util';
-import {
-  getCurrentField,
-  getPossibleMoveFields
-} from '../store/game/selectors';
+import { getCurrentField, getPossibleMoveFields } from '../store/game/selectors';
 
 interface Props {
   position: Position;
@@ -18,15 +15,8 @@ interface Props {
   isValidMove: boolean;
 }
 
-const Dot = (props: Props) => {
+const Dot: FunctionComponent<Props> = ({ position: { x, y }, current, addMove, field, isValidMove }: Props) => {
   const [hover, setHover] = useState(false);
-  const {
-    position: { x, y },
-    current,
-    addMove,
-    field,
-    isValidMove
-  } = props;
   const isCurrent = current.position.x === x && current.position.y === y;
   const { x: svgX, y: svgY } = getSVGPosition({ x, y });
   const { x: svgCX, y: svgCY } = getSVGPosition(current.position);
@@ -53,16 +43,7 @@ const Dot = (props: Props) => {
         r={hover || isCurrent ? '2' : '0.5'}
         fill={isCurrent ? 'red' : 'white'}
       />
-      {hover && isValidMove && (
-        <line
-          pointerEvents="none"
-          x1={svgCX}
-          y1={svgCY}
-          x2={svgX}
-          y2={svgY}
-          stroke="pink"
-        />
-      )}
+      {hover && isValidMove && <line pointerEvents="none" x1={svgCX} y1={svgCY} x2={svgX} y2={svgY} stroke="pink" />}
     </>
   );
 };
@@ -73,7 +54,7 @@ const mapStateToProps = ({ game }: Store, props: Props) => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
-  addMove: (field: Field) => dispatch(addMove(field))
+  addMove: (field: Field) => dispatch(addMoveAction(field))
 });
 
 export default connect(

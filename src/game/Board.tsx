@@ -1,20 +1,20 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import Dot from './Dot';
 import { connect } from 'react-redux';
 import { Store } from '../store';
-import { Move, Size } from './def';
-import { getKeyFromPath, getSVGPosition } from './util';
+import { Field, Move, Path, Size } from './def';
+import { getKeyFromPath } from './util';
 import { getMoves } from '../store/game/selectors';
 import Line from './Line';
 
 interface Props {
   size: Size;
-  fields: Array<any>;
-  moves: Array<any>;
-  borders: Array<any>;
+  fields: any[];
+  moves: any[];
+  borders: any[];
 }
 
-const Board = (props: Props) => {
+const Board: FunctionComponent<Props> = (props: Props) => {
   const {
     fields,
     moves,
