@@ -7269,6 +7269,12 @@ react-scripts@2.1.5:
   optionalDependencies:
     fsevents "1.2.4"
 
+react-spring@^8.0.18:
+  version "8.0.18"
+  resolved "https://registry.yarnpkg.com/react-spring/-/react-spring-8.0.18.tgz#f6fa09ab5acdeb37618c0e340d59830171b95c33"
+  dependencies:
+    "@babel/runtime" "^7.3.1"
+
 react@^16.8.2:
   version "16.8.3"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.3.tgz#c6f988a2ce895375de216edcfaedd6b9a76451d9"
