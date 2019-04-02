@@ -5,8 +5,12 @@ body {
     'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #282c34;
   color: white;
+}
+
+a:any-link {
+  color: inherit;
+  text-decoration: none;
 }
 
 #root,

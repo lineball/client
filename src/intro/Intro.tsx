@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { useSpring, animated, config, useChain } from 'react-spring';
 import styled from 'styled-components';
-
+import { colors } from './../styles';
 const Wrapper = styled(animated.div)`
   display: flex;
   width: 100%;
@@ -52,8 +52,8 @@ const Logo = ({ onAnimationFinish }: Props) => {
 
   const containerHeightRef = useRef(null);
   const containerHeightProps = useSpring({
-    to: { minHeight: '20%' },
-    from: { minHeight: '100%' },
+    to: { minHeight: '0vh' },
+    from: { minHeight: '100vh' },
     ref: containerHeightRef
   });
 
@@ -73,12 +73,12 @@ const Logo = ({ onAnimationFinish }: Props) => {
         <animated.svg viewBox="-1 -1 645 394" width="400" style={sizeProps}>
           <defs>
             <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="rgb(255,0,0)" stopOpacity="1" />
-              <stop offset="100%" stopColor="rgb(255,255,0)" stopOpacity="1" />
+              <stop offset="0%" stopColor={colors.logo.red} stopOpacity="1" />
+              <stop offset="100%" stopColor={colors.logo.yellow} stopOpacity="1" />
             </linearGradient>
             <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="rgb(255,255,0)" stopOpacity="1" />
-              <stop offset="100%" stopColor="rgb(255,0,0)" stopOpacity="1" />
+              <stop offset="0%" stopColor={colors.logo.yellow} stopOpacity="1" />
+              <stop offset="100%" stopColor={colors.logo.red} stopOpacity="1" />
             </linearGradient>
             <linearGradient id="grad3" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stopColor="#aaa" stopOpacity="1" />

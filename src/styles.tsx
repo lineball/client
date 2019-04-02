@@ -6,6 +6,14 @@ export const AppContainer = styled.div`
   margin: auto;
 `;
 
+export const colors = {
+  background: '#282c34',
+  logo: {
+    yellow: '#ff0',
+    red: '#f00'
+  }
+};
+
 export default {
   AppContainer
 };
