@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import UpperMenu from './UpperMenu';
 import LowerMenu from './LowerMenu';
 import { withRouter } from 'react-router';
+import Logo from '../logo/Logo';
+import NavigationLogo from '../logo/NavigationLogo';
 
 const Shade = styled.div`
   background: black;
@@ -21,6 +23,7 @@ const Navigation = ({ location }: any) => {
   }, [isHome]);
   return (
     <>
+      {!isHome && <NavigationLogo />}
       <UpperMenu setMenuOpen={() => setMenuOpen(x => !x)} />
       {isMenuOpen && (
         <>

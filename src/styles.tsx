@@ -40,10 +40,9 @@ export const FullPage = styled.div`
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
-  font-size: 200px;
   overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 `;
 
 export const colors = {

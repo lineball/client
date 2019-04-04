@@ -2,16 +2,17 @@ import React, { FunctionComponent, ReactElement } from 'react';
 import Board from './Board';
 import MoveList from './MoveList';
 import TurnInfo from './TurnInfo';
-import { Link } from 'react-router-dom';
-import { AppContainer } from '../styles';
+import { FullPage } from '../styles';
 
 const Game: FunctionComponent<{}> = (): ReactElement => {
   return (
-    <AppContainer>
-      <Board />
-      <TurnInfo />
-      <MoveList />
-    </AppContainer>
+    <FullPage>
+      <div style={{ maxWidth: 960, marginLeft: '30%', overflowY: 'scroll' }}>
+        <Board />
+        <TurnInfo />
+        <MoveList />
+      </div>
+    </FullPage>
   );
 };
 
