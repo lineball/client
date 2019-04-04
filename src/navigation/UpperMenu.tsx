@@ -19,6 +19,9 @@ const MenuIcon = styled.span`
   :before {
     content: 'X';
   }
+  :hover {
+    color: red;
+  }
   padding-left: 3rem;
   padding-right: 1rem;
 `;

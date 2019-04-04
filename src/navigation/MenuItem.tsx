@@ -11,7 +11,7 @@ const StyledMenuItem = styled.div`
   margin-bottom: 5px;
   font-size: 3rem;
   transition: 100ms;
-  &:hover {
+  :hover {
     color: red;
   }
 `;
