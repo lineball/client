@@ -11,7 +11,7 @@ const LogoContainer = styled.div`
 
 const NavigationLogo = () => (
   <LogoContainer>
-    <Logo width="80px" colors={['gray', 'white', 'white', 'gray']} />
+    <Logo key="navigation" width="80px" colors={['gray', 'white', 'white', 'gray']} />
   </LogoContainer>
 );
 export default NavigationLogo;

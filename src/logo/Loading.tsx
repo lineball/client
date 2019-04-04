@@ -30,7 +30,7 @@ const Loading = ({ onAnimationFinish }: Props) => {
 
   return (
     <Wrapper>
-      <Logo onAnimationFinish={toggle ? onAnimationFinish : () => setToggle(true)} toggle={toggle} />
+      <Logo key="loading" onAnimationFinish={toggle ? onAnimationFinish : () => setToggle(true)} toggle={toggle} />
       <animated.div style={textProps}>{toggle ? 'loaded :)' : 'loading...'}</animated.div>
     </Wrapper>
   );
