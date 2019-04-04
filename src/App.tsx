@@ -13,7 +13,7 @@ import { animated, useTransition } from 'react-spring';
 const pages = [{ path: '*/game' }];
 
 const App: FunctionComponent = (): ReactElement => {
-  const [showGame, setShowGame] = useState(true);
+  const [showGame, setShowGame] = useState(false);
 
   if (!showGame) {
     return (
