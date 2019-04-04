@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import UpperMenu from './UpperMenu';
 import LowerMenu from './LowerMenu';
@@ -16,10 +16,13 @@ const Shade = styled.div`
 const Navigation = ({ location }: any) => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const isHome = location.pathname === '/';
+  useEffect(() => {
+    isHome && setMenuOpen(true);
+  }, [isHome]);
   return (
     <>
-      <UpperMenu setMenuOpen={isHome ? null : () => setMenuOpen(x => !x)} />
-      {(isMenuOpen || isHome) && (
+      <UpperMenu setMenuOpen={() => setMenuOpen(x => !x)} />
+      {isMenuOpen && (
         <>
           <LowerMenu key={location.pathname} hideMenu={() => setMenuOpen(false)} />
           {!isHome && <Shade />}

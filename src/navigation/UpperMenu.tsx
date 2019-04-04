@@ -11,6 +11,7 @@ const Styled = styled.div`
   color: ${colors.background};
   font-size: 3rem;
   padding: 1rem;
+  transition: 100ms;
 `;
 
 const UserName = styled.span``;
