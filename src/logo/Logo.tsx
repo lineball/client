@@ -20,8 +20,9 @@ type Props = {
   toggle?: boolean;
   onAnimationFinish?: () => void;
   width?: number | string;
+  colors: [string, string, string, string];
 };
-const Logo = ({ toggle, onAnimationFinish, width }: Props) => {
+const Logo = ({ toggle, onAnimationFinish, width, colors }: Props) => {
   const farTrailRef = useRef(null);
   const farTrailProps = useSpring({
     from: { y: toggle ? 0 : -394 },
@@ -58,16 +59,16 @@ const Logo = ({ toggle, onAnimationFinish, width }: Props) => {
         <animated.svg viewBox="-1 -1 645 394" width={width}>
           <defs>
             <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor={colors.logo.red} stopOpacity="1" />
-              <stop offset="100%" stopColor={colors.logo.yellow} stopOpacity="1" />
+              <stop offset="0%" stopColor={colors[0]} stopOpacity="1" />
+              <stop offset="100%" stopColor={colors[1]} stopOpacity="1" />
             </linearGradient>
             <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor={colors.logo.yellow} stopOpacity="1" />
-              <stop offset="100%" stopColor={colors.logo.red} stopOpacity="1" />
+              <stop offset="0%" stopColor={colors[1]} stopOpacity="1" />
+              <stop offset="100%" stopColor={colors[0]} stopOpacity="1" />
             </linearGradient>
             <linearGradient id="grad3" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#aaa" stopOpacity="1" />
-              <stop offset="100%" stopColor="white" stopOpacity="1" />
+              <stop offset="0%" stopColor={colors[2]} stopOpacity="1" />
+              <stop offset="100%" stopColor={colors[3]} stopOpacity="1" />
             </linearGradient>
             <mask id="farTrailMask" maskUnits="userSpaceOnUse">
               <animated.rect width="645" height="394" fill="white" style={farTrailProps} />
@@ -104,7 +105,8 @@ const Logo = ({ toggle, onAnimationFinish, width }: Props) => {
 Logo.defaultProps = {
   toggle: false,
   onAnimationFinish: () => null,
-  width: 400
+  width: 400,
+  colors: [colors.logo.red, colors.logo.yellow, '#aaa', 'white']
 };
 
 export default Logo;
