@@ -12,9 +12,11 @@ const StyledMenuItem = styled.div`
   background: white;
   color: ${colors.background};
   margin-top: 5px;
+  margin-bottom: 5px;
   font-size: 3rem;
+  transition: 100ms;
   &:hover {
-    transform: scale(1.5);
+    margin-left: -20px;
   }
 `;
 

@@ -1,11 +1,10 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { useSpring, animated, config, useChain } from 'react-spring';
 import styled from 'styled-components';
-import { colors } from './../styles';
+import { colors } from '../styles';
 const Wrapper = styled(animated.div)`
   display: flex;
   width: 100%;
-  height: 210px;
 
   align-items: center;
   justify-content: center;
@@ -17,60 +16,46 @@ const LogoContainer = styled.div`
   z-index: 1;
 `;
 
-const TextContainer = styled.div`
-  flex: 0;
-  font-size: 120px;
-  margin-left: -10px;
-  z-index: 2;
-`;
-
-interface Props {
-  onAnimationFinish: () => void;
-}
-
-const Logo = ({ onAnimationFinish }: Props) => {
+type Props = {
+  toggle?: boolean;
+  onAnimationFinish?: () => void;
+  width?: number | string;
+};
+const Logo = ({ toggle, onAnimationFinish, width }: Props) => {
   const farTrailRef = useRef(null);
   const farTrailProps = useSpring({
-    from: { height: 0 },
-    to: { height: 394 },
+    from: { y: toggle ? 0 : -394 },
+    to: { y: toggle ? 394 : 0 },
     ref: farTrailRef
   });
 
   const closeTrailRef = useRef(null);
   const closeTrailProps = useSpring({
-    from: { y: 394 },
-    to: { y: -10 },
+    from: { y: toggle ? 0 : 394 },
+    to: { y: toggle ? -394 : 0 },
     ref: closeTrailRef
   });
 
   const ballRef = useRef(null);
   const ballProps = useSpring({
-    from: { fillOpacity: 0 },
-    to: { fillOpacity: 1 },
+    from: {
+      fillOpacity: toggle ? 1 : 0
+    },
+    to: {
+      fillOpacity: toggle ? 0 : 1
+    },
+    onRest: onAnimationFinish,
     ref: ballRef
   });
 
-  const containerHeightRef = useRef(null);
-  const containerHeightProps = useSpring({
-    to: { minHeight: '0vh' },
-    from: { minHeight: '100vh' },
-    ref: containerHeightRef
-  });
-
-  const sizeRef = useRef(null);
-  const sizeProps = useSpring({
-    to: { width: '200' },
-    from: { width: '400' },
-    ref: sizeRef,
-    onRest: onAnimationFinish
-  });
-
-  useChain([farTrailRef, closeTrailRef, ballRef, containerHeightRef, sizeRef], [0, 0.38, 0.6, 0.8, 0.95]);
-
+  useChain(
+    toggle ? [farTrailRef, closeTrailRef, { current: ballRef.current }] : [farTrailRef, closeTrailRef, ballRef],
+    toggle ? [0, 0.48, 0.48] : [0, 0.38, 0.6]
+  );
   return (
-    <Wrapper style={containerHeightProps}>
+    <Wrapper>
       <LogoContainer>
-        <animated.svg viewBox="-1 -1 645 394" width="400" style={sizeProps}>
+        <animated.svg viewBox="-1 -1 645 394" width={width}>
           <defs>
             <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stopColor={colors.logo.red} stopOpacity="1" />
@@ -114,6 +99,12 @@ const Logo = ({ onAnimationFinish }: Props) => {
       </LogoContainer>
     </Wrapper>
   );
+};
+
+Logo.defaultProps = {
+  toggle: false,
+  onAnimationFinish: () => null,
+  width: 400
 };
 
 export default Logo;

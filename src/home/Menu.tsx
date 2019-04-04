@@ -8,8 +8,8 @@ const StyledMenu = styled.div`
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  margin-left: 50%;
-  transform: rotate(-5deg) skew(-5deg);
+  //transform: rotate(-5deg) skew(-5deg);
+  width: 100%;
 `;
 
 const menuItems = [
@@ -31,7 +31,7 @@ const Menu = () => {
       {trail.map(({ x, ...style }, index) => (
         <animated.div
           key={menuItems[index].label}
-          style={{ transform: x.interpolate(x => `translate3d(${x}px,0,0)`), ...style }}
+          style={{ transform: x.interpolate(x => `translate3d(${x}px,0,0)`), marginRight: x, ...style }}
         >
           <MenuItem {...menuItems[index]} />
         </animated.div>

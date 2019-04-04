@@ -8,7 +8,7 @@ import { AppContainer } from '../styles';
 const Game: FunctionComponent<{}> = (): ReactElement => {
   return (
     <AppContainer>
-      <Link to="/">Home</Link>
+      <Link to="./">Home</Link>
       <br />
       <Board />
       <TurnInfo />
