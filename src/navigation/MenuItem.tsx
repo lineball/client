@@ -2,10 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { colors } from '../styles';
-type Props = {
-  path: string;
-  label: string;
-};
 
 const StyledMenuItem = styled.div`
   padding: 10px;
@@ -16,14 +12,21 @@ const StyledMenuItem = styled.div`
   font-size: 3rem;
   transition: 100ms;
   &:hover {
-    margin-left: -20px;
+    color: red;
   }
 `;
+type Props = {
+  path: string;
+  label: string;
+  onClick: () => void;
+};
 
-const MenuItem = ({ path, label }: Props) => {
+const MenuItem = ({ path, label, onClick }: Props) => {
   return (
     <StyledMenuItem>
-      <Link to={path}>{label}</Link>
+      <Link to={path} onClick={onClick}>
+        {label}
+      </Link>
     </StyledMenuItem>
   );
 };

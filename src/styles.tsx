@@ -1,9 +1,49 @@
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+
+export const Global = createGlobalStyle`
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+  background-color: #282c34;
+}
+
+a:any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+#root,
+html,
+body {
+  height: 100%;
+  width: 100%;
+  min-height: 100%;
+  min-width: 100%;
+  overflow: hidden;
+}
+`;
 
 export const AppContainer = styled.div`
   max-width: 960px;
-  height: 100%;
   margin: auto;
+  overflow-y: auto;
+  height: 100vh;
+`;
+
+export const FullPage = styled.div`
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  font-size: 200px;
+  overflow: hidden;
 `;
 
 export const colors = {
