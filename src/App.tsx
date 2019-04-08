@@ -10,8 +10,6 @@ import Settings from './pages/Settings';
 import Navigation from './navigation/Navigation';
 import { animated, useTransition } from 'react-spring';
 
-const pages = [{ path: '*/game' }];
-
 const App: FunctionComponent = (): ReactElement => {
   const [showGame, setShowGame] = useState(false);
 
