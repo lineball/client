@@ -25,7 +25,7 @@ const App: FunctionComponent = (): ReactElement => {
   return (
     <Provider store={store}>
       <Global />
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.REACT_APP_ROUTER_BASENAME}>
         <Navigation />
         <ContentWithRouter />
       </BrowserRouter>
@@ -42,8 +42,8 @@ const Content: any = ({ location }: any) => {
   return transitions.map(({ item, props, key }) => (
     <animated.div key={key} style={props}>
       <Switch location={item}>
-        <Route path="*/game" component={Game} />
-        <Route path="*/settings" component={Settings} />
+        <Route path="/game" component={Game} />
+        <Route path="/settings" component={Settings} />
         <Route path="/" component={Home} />
       </Switch>
     </animated.div>
