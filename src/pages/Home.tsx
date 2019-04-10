@@ -3,7 +3,7 @@ import { FullPage } from '../styles';
 import { useSpring, animated } from 'react-spring';
 import Logo from '../logo/Logo';
 
-const calc = (x: any, y: any) => [
+const calc = (x: number, y: number): [number, number] => [
   ((x - window.innerWidth / 2) * 60) / window.innerWidth,
   ((y - window.innerHeight / 2) * 60) / window.innerHeight
 ];
