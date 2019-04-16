@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { animated, useTrail } from 'react-spring';
 import { colors } from '../styles';
 import { withRouter } from 'react-router';
+import { device } from '../device';
 
 const Styled = styled.div`
   display: flex;
@@ -19,6 +20,14 @@ const Styled = styled.div`
   color: ${colors.background};
   font-size: 3rem;
   overflow: hidden;
+  @media ${device.tablet} {
+    right:15vh;
+   }
+  @media ${device.mobileS} {
+    font-size:1.5rem;
+    right:15vh;
+    width: 50vw;
+   }
 `;
 
 const menuItems = [

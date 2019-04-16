@@ -6,11 +6,8 @@ import Home from './pages/Home';
 import Settings from './pages/Settings';
 import { Route, Switch, withRouter } from 'react-router-dom';
 
-type Props = {
-  location: any;
-};
 
-const Content: FunctionComponent<Props> = ({ location }: Props): any => {
+const Content: FunctionComponent<any> = ({ location }): any => {
   const transitions = useTransition(location, location => location.pathname, {
     from: { opacity: 0, transform: 'translate3d(0, 100%,0)', position: 'absolute' },
     enter: { opacity: 1, transform: 'translate3d(0, 0%,0)', position: 'absolute' },
