@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { colors } from '../styles';
@@ -21,7 +21,7 @@ type Props = {
   onClick: () => void;
 };
 
-const MenuItem = ({ path, label, onClick }: Props) => {
+const MenuItem = ({ path, label, onClick }: Props): ReactElement => {
   return (
     <StyledMenuItem>
       <Link to={path} onClick={onClick}>

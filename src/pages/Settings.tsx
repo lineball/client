@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { FullPage } from '../styles';
 
-const Settings = () => {
+const Settings = (): ReactElement => {
   return (
     <FullPage>
       <div style={{ textAlign: 'center' }}>Settings</div>

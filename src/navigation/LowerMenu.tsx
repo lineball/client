@@ -1,9 +1,10 @@
-import React, { useMemo } from 'react';
+import React, { ReactElement, useMemo } from 'react';
 import MenuItem from './MenuItem';
 import styled from 'styled-components';
 import { animated, useTrail } from 'react-spring';
 import { colors } from '../styles';
-import { withRouter } from 'react-router';
+import { RouteComponentProps, withRouter } from 'react-router';
+import { Location } from 'history';
 
 const Styled = styled.div`
   display: flex;
@@ -27,8 +28,17 @@ const menuItems = [
   { label: 'Settings', path: '/settings' }
 ];
 
-const LowerMenu = ({ hideMenu, location }: any) => {
-  const currentMenuItems = useMemo(() => menuItems.filter(x => x.path !== location.pathname), []);
+type InnerProps = {
+  hideMenu: () => void;
+  location: Location;
+};
+type Props = InnerProps & RouteComponentProps;
+
+const LowerMenu = ({ hideMenu, location }: Props): ReactElement => {
+  const currentMenuItems = useMemo(
+    (): typeof menuItems => menuItems.filter((x): boolean => x.path !== location.pathname),
+    []
+  );
   const trail = useTrail(currentMenuItems.length, {
     opacity: 1,
     x: 0,
@@ -36,14 +46,16 @@ const LowerMenu = ({ hideMenu, location }: any) => {
   });
   return (
     <Styled>
-      {trail.map(({ x, ...style }, index) => (
-        <animated.div
-          key={currentMenuItems[index].label}
-          style={{ transform: x.interpolate(x => `translate3d(${x}px,0,0)`), marginRight: x, ...style }}
-        >
-          <MenuItem {...currentMenuItems[index]} onClick={hideMenu} />
-        </animated.div>
-      ))}
+      {trail.map(
+        ({ x, ...style }, index): ReactElement => (
+          <animated.div
+            key={currentMenuItems[index].label}
+            style={{ transform: x.interpolate((n): string => `translate3d(${n}px,0,0)`), marginRight: x, ...style }}
+          >
+            <MenuItem {...currentMenuItems[index]} onClick={hideMenu} />
+          </animated.div>
+        )
+      )}
     </Styled>
   );
 };

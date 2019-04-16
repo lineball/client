@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { ReactElement, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import UpperMenu from './UpperMenu';
 import LowerMenu from './LowerMenu';
-import { withRouter } from 'react-router';
-import Logo from '../logo/Logo';
+import { RouteComponentProps, withRouter } from 'react-router';
 import NavigationLogo from '../logo/NavigationLogo';
 
 const Shade = styled.div`
@@ -15,19 +14,25 @@ const Shade = styled.div`
   opacity: 0.7;
 `;
 
-const Navigation = ({ location }: any) => {
+type InnerProps = {
+  location: Location;
+};
+
+type Props = InnerProps & RouteComponentProps;
+
+const Navigation = ({ location }: Props): ReactElement => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const isHome = location.pathname === '/';
-  useEffect(() => {
-    isHome && setMenuOpen(true);
+  useEffect((): void => {
+    if (isHome) setMenuOpen(true);
   }, [isHome]);
   return (
     <>
       {!isHome && <NavigationLogo />}
-      <UpperMenu setMenuOpen={() => setMenuOpen(x => !x)} />
+      <UpperMenu setMenuOpen={(): void => setMenuOpen((x): boolean => !x)} />
       {isMenuOpen && (
         <>
-          <LowerMenu key={location.pathname} hideMenu={() => setMenuOpen(false)} />
+          <LowerMenu key={location.pathname} hideMenu={(): void => setMenuOpen(false)} />
           {!isHome && <Shade />}
         </>
       )}

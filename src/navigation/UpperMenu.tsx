@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import styled from 'styled-components';
 import { colors } from '../styles';
 
@@ -26,9 +26,13 @@ const MenuIcon = styled.span`
   padding-right: 1rem;
 `;
 
-const UpperMenu = ({ setMenuOpen }: any) => (
+type Props = {
+  setMenuOpen: () => void;
+};
+
+const UpperMenu = ({ setMenuOpen }: Props): ReactElement => (
   <Styled>
-    <UserName>%USERNAME%</UserName>
+    <UserName>User</UserName>
     {setMenuOpen && <MenuIcon onClick={setMenuOpen} />}
   </Styled>
 );

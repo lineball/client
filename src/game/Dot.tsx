@@ -2,7 +2,7 @@ import React, { FunctionComponent, ReactElement, useState } from 'react';
 import { Store } from '../store';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
-import { addMove as addMoveAction } from '../store/game/actions';
+import { addMove as addMoveAction, AddMoveAction } from '../store/game/actions';
 import { Field, Position } from './def';
 import { getSVGPosition } from './util';
 import { getCurrentField, getPossibleMoveFields } from '../store/game/selectors';
@@ -38,7 +38,7 @@ const Dot: FunctionComponent<Props> = ({
     <>
       {isValidMove && (
         <circle
-          onClick={() => {
+          onClick={(): void => {
             setHover(false);
             addMove(field);
           }}
@@ -46,8 +46,8 @@ const Dot: FunctionComponent<Props> = ({
           fill="transparent"
           cx={svgX}
           cy={svgY}
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
+          onMouseEnter={(): void => setHover(true)}
+          onMouseLeave={(): void => setHover(false)}
         />
       )}
       <circle
@@ -68,7 +68,7 @@ const mapStateToProps = ({ game }: Store, { field }: { field: Field }): StatePro
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  addMove: (field: Field) => dispatch(addMoveAction(field))
+  addMove: (field: Field): AddMoveAction => dispatch(addMoveAction(field))
 });
 
 export default connect(

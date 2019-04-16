@@ -91,19 +91,33 @@
       "import/no-cycle": "off",
       "import/no-useless-path-segments": "off",
       "import/no-named-as-default": "off",
-      "import/named": "off"
+      "import/named": "off",
+      "@typescript-eslint/prefer-interface": "off"
     },
     "globals": {
       "it": true,
       "expect": true,
       "describe": true,
-      "document": true
-    }
+      "document": true,
+      "window": true
+    },
+    "overrides": [
+      {
+        "files": [
+          "*.test.ts*",
+          "*.test.js*"
+        ],
+        "rules": {
+          "@typescript-eslint/explicit-function-return-type": "off"
+        }
+      }
+    ]
   },
   "prettier": {
     "singleQuote": true,
     "tabWidth": 2,
-    "printWidth": 120
+    "printWidth": 120,
+    "parser": "typescript"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -14,7 +14,7 @@ const App: FunctionComponent = (): ReactElement => {
     return (
       <>
         <Global />
-        <Loading onAnimationFinish={() => setShowGame(true)} />
+        <Loading onAnimationFinish={(): void => setShowGame(true)} />
       </>
     );
   }

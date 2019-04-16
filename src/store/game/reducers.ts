@@ -1,6 +1,6 @@
 import { ADD_MOVE, AddMoveAction, REVERT_MOVE, REVERT_TURN } from './actions';
 import { Action } from '../index';
-import { Field, Path, Player, Size, Turn } from '../../game/def';
+import { Field, Move, Path, Player, Size, Turn } from '../../game/def';
 import { initialState } from './init';
 import { getCurrentField, getCurrentTurn } from './selectors';
 
@@ -17,7 +17,7 @@ export default (state: GameState = initialState, action: Action): GameState => {
     case ADD_MOVE: {
       const { payload: field } = action as AddMoveAction;
       const currentField = getCurrentField(state);
-      const path = state.paths.find(f => f.includes(field) && f.includes(currentField));
+      const path = state.paths.find((f): boolean => f.includes(field) && f.includes(currentField));
       if (!path) {
         throw new Error('Path not found!');
       }
@@ -28,12 +28,10 @@ export default (state: GameState = initialState, action: Action): GameState => {
       };
       // is same turn
       const isSameTurn = !!state.turns
-        .flatMap(turn => turn.moves)
-        .map(move => move.path)
+        .flatMap((turn): Move[] => turn.moves)
+        .map((move): Path => move.path)
         .concat(state.borders)
-        .filter((p: Path) => p.includes(field))
-        .map((p: Path) => p).length;
-
+        .filter((p: Path): boolean => p.includes(field)).length;
       if (isSameTurn) {
         return {
           ...state,

@@ -1,4 +1,4 @@
-import React, { FunctionComponent, ReactElement } from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 import Dot from './Dot';
 import { connect } from 'react-redux';
 import { Store } from '../store';
@@ -17,7 +17,7 @@ interface StateProps {
 
 type Props = StateProps;
 
-const Board: FunctionComponent<Props> = (props: Props): ReactElement => {
+const Board = (props: Props): ReactElement => {
   const {
     fields,
     moves,
@@ -27,15 +27,25 @@ const Board: FunctionComponent<Props> = (props: Props): ReactElement => {
   } = props;
   return (
     <svg width={50 * x} height={50 * (y + 1)} viewBox={`0 0 ${10 * x} ${10 * y}`}>
-      {borders.map(border => (
-        <Line key={getKeyFromPath(border)} path={border} color={currentTurn.player === Player.WHITE ? 'blue' : 'red'} />
-      ))}
-      {moves.map(({ path }) => (
-        <Line key={getKeyFromPath(path)} path={path} />
-      ))}
-      {fields.map(field => (
-        <Dot {...field} key={`${field.position.x}_${field.position.y}`} field={field} />
-      ))}
+      {borders.map(
+        (border): ReactNode => (
+          <Line
+            key={getKeyFromPath(border)}
+            path={border}
+            color={currentTurn.player === Player.WHITE ? 'blue' : 'red'}
+          />
+        )
+      )}
+      {moves.map(
+        ({ path }): ReactNode => (
+          <Line key={getKeyFromPath(path)} path={path} />
+        )
+      )}
+      {fields.map(
+        (field): ReactNode => (
+          <Dot {...field} key={`${field.position.x}_${field.position.y}`} field={field} />
+        )
+      )}
     </svg>
   );
 };

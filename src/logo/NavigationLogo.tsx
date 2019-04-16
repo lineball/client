@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import styled from 'styled-components';
 import Logo from './Logo';
+
 const LogoContainer = styled.div`
   position: absolute;
   top: 5vh;
@@ -9,7 +10,7 @@ const LogoContainer = styled.div`
   margin: auto;
 `;
 
-const NavigationLogo = () => (
+const NavigationLogo = (): ReactElement => (
   <LogoContainer>
     <Logo key="navigation" width="80px" colors={['gray', 'white', 'white', 'gray']} />
   </LogoContainer>

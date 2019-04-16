@@ -47,10 +47,7 @@ export const FullPage = styled.div`
 
 export const colors = {
   background: '#282c34',
-  logo: {
-    yellow: '#ff0',
-    red: '#f00'
-  }
+  logo: ['#ff0', '#f00', '#aaa', '#fff']
 };
 
 export default {

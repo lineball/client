@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { ReactElement, useEffect } from 'react';
 import { FullPage } from '../styles';
-import { useSpring, animated } from 'react-spring';
+import { animated, useSpring } from 'react-spring';
 import Logo from '../logo/Logo';
 
 const calc = (x: number, y: number): [number, number] => [
@@ -8,24 +8,29 @@ const calc = (x: number, y: number): [number, number] => [
   ((y - window.innerHeight / 2) * 60) / window.innerHeight
 ];
 
-const transform: any = (x: number, y: number) => `rotateX(${-y}deg) rotateY(${x}deg)`;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const transform: any = (x: number, y: number): string => `rotateX(${-y}deg) rotateY(${x}deg)`;
 
-const Home = () => {
-  const [props, set] = useSpring(() => ({
-    xy: [0, 0]
-  }));
+type SpringValues = {
+  xy: [number, number];
+};
 
-  useEffect(() => {
-    const handle = ({ clientX: x, clientY: y }: MouseEvent) => set({ xy: calc(x, y) });
-    window.addEventListener('mousemove', handle);
-    return () => {
-      window.removeEventListener('mousemove', handle);
-    };
-  });
+const Home = (): ReactElement => {
+  const [spring, set] = useSpring((): SpringValues => ({ xy: [0, 0] }));
+
+  useEffect(
+    (): (() => void) => {
+      const handle = ({ clientX, clientY }: MouseEvent): void => set({ xy: calc(clientX, clientY) });
+      window.addEventListener('mousemove', handle);
+      return (): void => {
+        window.removeEventListener('mousemove', handle);
+      };
+    }
+  );
 
   return (
     <FullPage>
-      <animated.div style={{ transform: props.xy.interpolate(transform) }}>
+      <animated.div style={{ transform: spring.xy.interpolate(transform) }}>
         <Logo width="50vw" />
       </animated.div>
     </FullPage>

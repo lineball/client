@@ -10,8 +10,8 @@ const initField = ({ x, y }: Position): Field => ({
 
 const initFields = (): Field[] =>
   flatMap([
-    ...[0, 12].map(y => range(3, 6).map(x => initField({ x, y }))),
-    ...range(1, 12).map(y => range(0, 9).map(x => initField({ x, y })))
+    ...[0, 12].map((y): Field[] => range(3, 6).map((x): Field => initField({ x, y }))),
+    ...range(1, 12).map((y): Field[] => range(0, 9).map((x): Field => initField({ x, y })))
   ]);
 
 const isBorder = ([a, b]: [Position, Position]): boolean => {
@@ -44,19 +44,21 @@ const isBehindGatePath = (path: Path): boolean => {
 const initBordersAndPaths = (fields: Field[]): [Path[], Path[]] =>
   partition(
     flatMap(
-      fields.map(field => {
-        const { x, y } = field.position;
-        const nearestFieldsWithGreaterPosition = fields.filter(
-          maybeNearest =>
-            (([x, x + 1].includes(maybeNearest.position.x) && [y, y + 1].includes(maybeNearest.position.y)) ||
-              (maybeNearest.position.x === x - 1 && maybeNearest.position.y === y + 1)) &&
-            maybeNearest.name !== field.name &&
-            !isBehindGatePath([field, maybeNearest])
-        );
-        return nearestFieldsWithGreaterPosition.map(nearestField => [field, nearestField] as Path);
-      })
+      fields.map(
+        (field): Path[] => {
+          const { x, y } = field.position;
+          const nearestFieldsWithGreaterPosition = fields.filter(
+            (maybeNearest): boolean =>
+              (([x, x + 1].includes(maybeNearest.position.x) && [y, y + 1].includes(maybeNearest.position.y)) ||
+                (maybeNearest.position.x === x - 1 && maybeNearest.position.y === y + 1)) &&
+              maybeNearest.name !== field.name &&
+              !isBehindGatePath([field, maybeNearest])
+          );
+          return nearestFieldsWithGreaterPosition.map((nearestField): Path => [field, nearestField]);
+        }
+      )
     ),
-    ([a, b]) => isBorder([a.position, b.position])
+    ([a, b]): boolean => isBorder([a.position, b.position])
   );
 
 const initTurns = (): Turn[] => [

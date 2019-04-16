@@ -1,5 +1,5 @@
-import React, { FunctionComponent, ReactElement } from 'react';
-import { Store } from '../store';
+import React, { FunctionComponent, ReactElement, ReactNode } from 'react';
+import { Action, Store } from '../store';
 import { connect } from 'react-redux';
 import { Move, Turn } from './def';
 import { getKeyFromPath } from './util';
@@ -25,7 +25,7 @@ const MoveList: FunctionComponent<Props> = ({ moves, revertMove, revertTurn, tur
     {turn.moves.length ? (
       <button
         type="button"
-        onClick={() => {
+        onClick={(): void => {
           revertMove();
         }}
       >
@@ -35,7 +35,7 @@ const MoveList: FunctionComponent<Props> = ({ moves, revertMove, revertTurn, tur
       moves.length && (
         <button
           type="button"
-          onClick={() => {
+          onClick={(): void => {
             revertTurn();
           }}
         >
@@ -44,9 +44,11 @@ const MoveList: FunctionComponent<Props> = ({ moves, revertMove, revertTurn, tur
       )
     )}
     <ul>
-      {moves.map(move => (
-        <li key={getKeyFromPath(move.path)}>{JSON.stringify(move)}</li>
-      ))}
+      {moves.map(
+        (move): ReactNode => (
+          <li key={getKeyFromPath(move.path)}>{JSON.stringify(move)}</li>
+        )
+      )}
     </ul>
   </>
 );
@@ -57,8 +59,8 @@ const mapStateToProps = ({ game }: Store): StateProps => ({
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  revertMove: () => dispatch(revertMoveAction()),
-  revertTurn: () => dispatch(revertTurnAction())
+  revertMove: (): Action => dispatch(revertMoveAction()),
+  revertTurn: (): Action => dispatch(revertTurnAction())
 });
 
 export default connect(
