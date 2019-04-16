@@ -26,7 +26,7 @@ const Styled = styled.div`
   @media ${device.mobileS} {
     font-size:1.5rem;
     right:15vh;
-    width: 50vw;
+    width: 60vw;
    }
 `;
 

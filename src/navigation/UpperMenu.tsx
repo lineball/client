@@ -18,7 +18,15 @@ const Styled = styled.div`
    }
   @media ${device.mobileS} {
     font-size:1.5rem;
-    right:10vh;
+    right:5vh;
+   }
+   @media ${device.mobileM} {
+    font-size:1.5rem;
+    right:9vh;
+   }
+   @media ${device.mobileL} {
+    font-size:1.5rem;
+    right:13vh;
    }
 `;
 
