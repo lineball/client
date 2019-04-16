@@ -34,6 +34,13 @@ jobs:
           at: ~/repo
       - run: yarn test
 
+  lint:
+    executor: node
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run: yarn lint
+
   build:
     executor: node
     steps:
@@ -75,6 +82,9 @@ workflows:
       - test:
           requires:
             - install
+      - lint:
+          requires:
+            - install
       - build:
           requires:
             - install
@@ -82,6 +92,7 @@ workflows:
           requires:
             - test
             - build
+            - lint
           filters:
             branches:
               only: master
