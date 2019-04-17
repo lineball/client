@@ -1,6 +1,6 @@
 import { GameState } from './reducers';
 import { flatMap, partition, range } from 'lodash';
-import { Field, Path, Player, Position, Turn } from '../../game/def';
+import { Field, Path, Player, Position, Turn } from '../../game/defs';
 import { getKeyFromPath } from '../../game/util';
 
 const initField = ({ x, y }: Position): Field => ({

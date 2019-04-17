@@ -3,7 +3,7 @@ import { Store } from '../store';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import { addMove as addMoveAction, AddMoveAction } from '../store/game/actions';
-import { Field, Position } from './def';
+import { Field, Position } from './defs';
 import { getSVGPosition } from './util';
 import { getCurrentField, getPossibleMoveFields } from '../store/game/selectors';
 import Line from './svg/Line';

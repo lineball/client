@@ -1,5 +1,5 @@
 import React, { memo, ReactElement, useMemo } from 'react';
-import { Path, Position } from '../def';
+import { Path, Position } from '../defs';
 import { getSVGPosition } from '../util';
 
 type Props = {

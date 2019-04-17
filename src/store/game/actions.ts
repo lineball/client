@@ -1,4 +1,4 @@
-import { Field } from '../../game/def';
+import { Field } from '../../game/defs';
 import { Action } from '../index';
 
 export const REVERT_MOVE = '@lineball/REVERT_MOVE';

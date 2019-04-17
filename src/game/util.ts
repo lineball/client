@@ -1,4 +1,4 @@
-import { Path, Position } from './def';
+import { Path, Position } from './defs';
 
 export const getSVGPosition = ({ x, y }: Position): Position => ({
   x: x * 10 + 5,

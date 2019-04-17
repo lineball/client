@@ -1,5 +1,5 @@
 import { GameState } from './reducers';
-import { Field, Move, Path, Turn } from '../../game/def';
+import { Field, Move, Path, Turn } from '../../game/defs';
 import { createSelector } from 'reselect';
 import { difference } from 'lodash';
 

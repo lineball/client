@@ -1,7 +1,7 @@
 import React, { FunctionComponent, ReactElement, ReactNode } from 'react';
 import { Action, Store } from '../store';
 import { connect } from 'react-redux';
-import { Move, Turn } from './def';
+import { Move, Turn } from './defs';
 import { getKeyFromPath } from './util';
 import { Dispatch } from 'redux';
 import { revertMove as revertMoveAction, revertTurn as revertTurnAction } from '../store/game/actions';

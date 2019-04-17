@@ -2,7 +2,7 @@ import React, { FunctionComponent, ReactElement } from 'react';
 import { connect } from 'react-redux';
 import { Store } from '../store';
 import { getCurrentTurn } from '../store/game/selectors';
-import { Turn } from './def';
+import { Turn } from './defs';
 
 interface StateProps {
   turn: Turn;

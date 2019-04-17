@@ -1,6 +1,6 @@
 import { ADD_MOVE, AddMoveAction, REVERT_MOVE, REVERT_TURN } from './actions';
 import { Action } from '../index';
-import { Field, Move, Path, Player, Size, Turn } from '../../game/def';
+import { Field, Move, Path, Player, Size, Turn } from '../../game/defs';
 import { initialState } from './init';
 import { getCurrentField, getCurrentTurn } from './selectors';
 

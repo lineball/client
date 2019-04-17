@@ -2,7 +2,7 @@ import React, { ReactElement, ReactNode } from 'react';
 import Dot from './Dot';
 import { connect } from 'react-redux';
 import { Store } from '../store';
-import { Field, Move, Path, Player, Size, Turn } from './def';
+import { Field, Move, Path, Player, Size, Turn } from './defs';
 import { getKeyFromPath } from './util';
 import { getCurrentTurn, getMoves } from '../store/game/selectors';
 import Line from './svg/Line';
