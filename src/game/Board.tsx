@@ -1,62 +1,50 @@
 import React, { ReactElement, ReactNode } from 'react';
-import Dot from './Dot';
 import { connect } from 'react-redux';
 import { Store } from '../store';
-import { Field, Move, Path, Player, Size, Turn } from './defs';
+import { Dot as TDot, Move, Path, Player, Turn } from './defs';
 import { getKeyFromPath } from './util';
 import { getCurrentTurn, getMoves } from '../store/game/selectors';
 import Line from './svg/Line';
+import Dot from './Dot';
 
 interface StateProps {
-  size: Size;
-  fields: Field[];
+  dots: TDot[];
   moves: Move[];
-  borders: Path[];
+  paths: Path[];
   currentTurn: Turn;
 }
 
 type Props = StateProps;
 
 const Board = (props: Props): ReactElement => {
-  const {
-    fields,
-    moves,
-    size: { x, y },
-    borders,
-    currentTurn
-  } = props;
+  const { dots, moves, paths, currentTurn } = props;
   return (
-    <svg width={50 * x} height={50 * (y + 1)} viewBox={`0 0 ${10 * x} ${10 * y}`}>
-      {borders.map(
-        (border): ReactNode => (
-          <Line
-            key={getKeyFromPath(border)}
-            path={border}
-            color={currentTurn.player === Player.WHITE ? 'blue' : 'red'}
-          />
+    <svg width={400} height={400} viewBox={`0 0 400 400`}>
+      {paths.map(
+        (path): ReactNode => (
+          <Line key={getKeyFromPath(path)} path={path} color={currentTurn.player === Player.WHITE ? 'blue' : 'red'} />
         )
       )}
-      {moves.map(
-        ({ path }): ReactNode => (
-          <Line key={getKeyFromPath(path)} path={path} />
-        )
-      )}
-      {fields.map(
-        (field): ReactNode => (
-          <Dot {...field} key={`${field.position.x}_${field.position.y}`} field={field} />
-        )
-      )}
+      {/*{moves.map(*/}
+      {/*({ path }): ReactNode => (*/}
+      {/*<Line key={getKeyFromPath(path)} path={path} />*/}
+      {/*)*/}
+      {/*)}*/}
+      {/*{dots.map(*/}
+      {/*(field): ReactNode => (*/}
+      {/*<Dot {...field} key={`${field.position.x}_${field.position.y}`} field={field} />*/}
+      {/*)*/}
+      {/*)}*/}
     </svg>
   );
 };
 
 const mapStateToProps = ({ game }: Store): StateProps => {
-  const { fields, size, borders } = game;
+  const { dots, paths } = game;
   return {
-    fields,
+    dots,
     moves: getMoves(game),
-    size,
-    borders,
+    paths,
     currentTurn: getCurrentTurn(game)
   };
 };

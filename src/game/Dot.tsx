@@ -3,23 +3,23 @@ import { Store } from '../store';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import { addMove as addMoveAction, AddMoveAction } from '../store/game/actions';
-import { Field, Position } from './defs';
+import { Dot as TDot, Position } from './defs';
 import { getSVGPosition } from './util';
 import { getCurrentField, getPossibleMoveFields } from '../store/game/selectors';
 import Line from './svg/Line';
 
 interface ComponentProps {
   position: Position;
-  field: Field;
+  field: TDot;
 }
 
 interface StateProps {
   isValidMove: boolean;
-  current: Field;
+  current: TDot;
 }
 
 interface DispatchProps {
-  addMove: (field: Field) => void;
+  addMove: (field: TDot) => void;
 }
 
 type Props = ComponentProps & StateProps & DispatchProps;
@@ -62,13 +62,13 @@ const Dot: FunctionComponent<Props> = ({
   );
 };
 
-const mapStateToProps = ({ game }: Store, { field }: { field: Field }): StateProps => ({
+const mapStateToProps = ({ game }: Store, { field }: { field: TDot }): StateProps => ({
   current: getCurrentField(game),
   isValidMove: getPossibleMoveFields(game).includes(field)
 });
 
 const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
-  addMove: (field: Field): AddMoveAction => dispatch(addMoveAction(field))
+  addMove: (field: TDot): AddMoveAction => dispatch(addMoveAction(field))
 });
 
 export default connect(

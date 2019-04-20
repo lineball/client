@@ -21,9 +21,9 @@ const addMove = (state: GameState, action: Action) => {};
 
 export default (state: GameState = initialState, action: Action): GameState => {
   switch (action.type) {
-    case ADD_MOVE: {
-      return addMove(state, action);
-    }
+    // case ADD_MOVE: {
+    //   return addMove(state, action);
+    // }
     //   const { payload: field } = action as AddMoveAction;
     //   const currentField = getCurrentField(state);
     //   const path = state.paths.find((f): boolean => f.includes(field) && f.includes(currentField));

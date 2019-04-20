@@ -1,19 +1,19 @@
 import { GameState } from './reducers';
-import { Field, Move, Path, Turn } from '../../game/defs';
+import { Dot, Move, Path, Turn } from '../../game/defs';
 import { createSelector } from 'reselect';
 import { difference } from 'lodash';
 
 export const getMoves = (state: GameState): Move[] => state.turns.flatMap((turn): Move[] => turn.moves);
-const getFields = (state: GameState): Field[] => state.fields;
+const getFields = (state: GameState): Dot[] => state.dots;
 const getPaths = (state: GameState): Path[] => state.paths;
 const getTurns = (state: GameState): Turn[] => state.turns;
 
-const getCenterField = (fields: Field[]): Field | undefined =>
+const getCenterField = (fields: Dot[]): Dot | undefined =>
   fields.find((f): boolean => f.position.x === 4 && f.position.y === 6);
 
 export const getCurrentField = createSelector(
   [getMoves, getFields],
-  (moves, fields): Field => {
+  (moves, fields): Dot => {
     if (moves.length === 0) {
       const find = getCenterField(fields);
       if (!find) {
@@ -57,9 +57,9 @@ export const getUsedPathsWithCurrentField = createSelector(
 
 export const getPossibleMoveFields = createSelector(
   [getCurrentField, getAllPathsWithCurrentField, getUsedPathsWithCurrentField],
-  (currentField, allPathsWithCurrentField, usedPathsWithCurrentField): Field[] => {
+  (currentField, allPathsWithCurrentField, usedPathsWithCurrentField): Dot[] => {
     return difference(allPathsWithCurrentField, usedPathsWithCurrentField).map(
-      ([a, b]): Field => (a === currentField ? b : a)
+      ([a, b]): Dot => (a === currentField ? b : a)
     );
   }
 );

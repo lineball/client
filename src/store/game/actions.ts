@@ -1,4 +1,4 @@
-import { Field } from '../../game/defs';
+import { Dot } from '../../game/defs';
 import { Action } from '../index';
 
 export const REVERT_MOVE = '@lineball/REVERT_MOVE';
@@ -7,11 +7,11 @@ export const ADD_MOVE = '@lineball/ADD_MOVE';
 export const INIT = '@lineball/INIT';
 
 export interface AddMoveAction extends Action {
-  payload: Field;
+  payload: Dot;
 }
 
-export const addMove = (field: Field): AddMoveAction => {
-  const payload: Field = field;
+export const addMove = (field: Dot): AddMoveAction => {
+  const payload: Dot = field;
   return {
     type: ADD_MOVE,
     payload
