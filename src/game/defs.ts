@@ -1,25 +1,28 @@
 // Lineball - (domain) game interfaces definition
 
+import { GoalType } from '../store/game/init';
+
 export interface Size {
   x: number;
   y: number;
 }
+
+export type Path = [Dot, Dot];
 
 export interface Position {
   x: number;
   y: number;
 }
 
-export interface Field {
-  name: string;
+export interface Dot {
   position: Position;
+  border: boolean;
+  goal: GoalType;
 }
 
-export type Path = [Field, Field];
-
 export enum Player {
-  WHITE,
-  BLACK
+  WHITE = 'WHITE',
+  BLACK = 'BLACK'
 }
 
 export interface Move {

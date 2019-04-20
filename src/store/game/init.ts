@@ -1,91 +1,74 @@
 import { GameState } from './reducers';
 import { flatMap, partition, range } from 'lodash';
-import { Field, Path, Player, Position, Turn } from '../../game/defs';
+import { Dot, Path, Player, Position, Turn } from '../../game/defs';
 import { getKeyFromPath } from '../../game/util';
 
-const initField = ({ x, y }: Position): Field => ({
-  name: `${String.fromCharCode(65 + y)}${x}`,
-  position: { x, y }
-});
+export type GoalType = Player | false;
 
-const initFields = (): Field[] =>
-  flatMap([
-    ...[0, 12].map((y): Field[] => range(3, 6).map((x): Field => initField({ x, y }))),
-    ...range(1, 12).map((y): Field[] => range(0, 9).map((x): Field => initField({ x, y })))
-  ]);
-
-const isBorder = ([a, b]: [Position, Position]): boolean => {
-  // horizontal
-  if (a.y === b.y) {
-    if ([0, 12].includes(a.y)) {
-      return true;
-    }
-    if ([1, 11].includes(a.y) && (a.x < 3 || a.x >= 5)) {
-      return true;
-    }
+export const DefaultFieldConfig = {
+  inner: {
+    width: 8,
+    height: 10
+  },
+  goal: {
+    width: 2,
+    height: 1
   }
-  // vertical
-  else if (a.x === b.x) {
-    if ([0, 8].includes(a.x)) {
-      return true;
-    }
-    if ([3, 5].includes(a.x) && [0, 11].includes(a.y)) {
-      return true;
-    }
-  }
-  return false;
 };
+export type Config = typeof DefaultFieldConfig;
 
-const isBehindGatePath = (path: Path): boolean => {
-  const pathString = getKeyFromPath(path);
-  return ['5_0:6_1', '3_0:2_1', '6_11:5_12', '2_11:3_12'].includes(pathString);
-};
+export const initializeDots = (config: Config = DefaultFieldConfig): Dot[] => {
+  //innerField positions
+  const { width, height } = config.inner;
+  const widths: number[] = range(-width / 2, width / 2 + 1);
+  const heights: number[] = range(-height / 2, height / 2 + 1);
+  const innerFieldPositions = widths.flatMap(x => heights.map(y => ({ x, y } as Position)));
 
-const initBordersAndPaths = (fields: Field[]): [Path[], Path[]] =>
-  partition(
-    flatMap(
-      fields.map(
-        (field): Path[] => {
-          const { x, y } = field.position;
-          const nearestFieldsWithGreaterPosition = fields.filter(
-            (maybeNearest): boolean =>
-              (([x, x + 1].includes(maybeNearest.position.x) && [y, y + 1].includes(maybeNearest.position.y)) ||
-                (maybeNearest.position.x === x - 1 && maybeNearest.position.y === y + 1)) &&
-              maybeNearest.name !== field.name &&
-              !isBehindGatePath([field, maybeNearest])
-          );
-          return nearestFieldsWithGreaterPosition.map((nearestField): Path => [field, nearestField]);
-        }
-      )
-    ),
-    ([a, b]): boolean => isBorder([a.position, b.position])
+  //"goal" positions
+  const { width: goalWidth, height: goalHeight } = config.goal;
+  const goalWidths: number[] = range(-goalWidth / 2, goalWidth / 2 + 1);
+  const goalPositiveHeights: number[] = [...range(height / 2 + 1, height / 2 + 1 + goalHeight)];
+  const goalHeights: number[] = goalPositiveHeights.concat(goalPositiveHeights.map((number): number => -number));
+  const goalPositions = goalWidths.flatMap(x => goalHeights.map(y => ({ x, y } as Position)));
+
+  const positions: Position[] = [...innerFieldPositions, ...goalPositions];
+
+  const isBorder = ({ x, y }: Position): boolean => {
+    // checking if there are positions around our position
+    // doing only diagonally (its enough) - position at every diagonal means its not border
+    const find = positions.filter(f => [x - 1, x + 1].includes(f.x) && [y - 1, y + 1].includes(f.y));
+    return find ? find.length !== 4 : false;
+  };
+
+  const innerFieldDots: Dot[] = innerFieldPositions.map(
+    (position): Dot => ({ position, goal: false, border: isBorder(position) })
   );
+  const goalDots = goalPositions.map(
+    (position): Dot => ({
+      position,
+      goal: position.y > 0 ? Player.WHITE : Player.BLACK,
+      border: isBorder(position)
+    })
+  );
+  return [...innerFieldDots, ...goalDots];
+};
 
-const initTurns = (): Turn[] => [
+export const initializePaths = (dots: Dot[]): Path[] => {
+  return dots.flatMap(dot => {
+    return dots
+      .filter(
+        (maybeNearest): boolean =>
+          [dot.position.x, dot.position.x + 1].includes(maybeNearest.position.x) &&
+          [dot.position.y, dot.position.y + 1].includes(maybeNearest.position.y) &&
+          (dot.position.x !== maybeNearest.position.x && dot.position.y !== maybeNearest.position.y)
+      )
+      .map((nearestDot): Path => [dot, nearestDot]);
+  });
+};
+
+export const initializeTurns = (): Turn[] => [
   {
     player: Player.WHITE,
     moves: []
   }
 ];
-
-const initState = (): GameState => {
-  const fields = initFields();
-  const [borders, paths] = initBordersAndPaths(fields);
-  return {
-    fields,
-    paths,
-    borders,
-    turns: initTurns(),
-    size: {
-      x: 9,
-      y: 12
-    }
-  };
-};
-export const initialState: GameState = initState();
-
-export const testOnly = {
-  initState,
-  initFields,
-  initBordersAndPaths
-};
