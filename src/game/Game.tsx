@@ -7,7 +7,7 @@ import { FullPage } from '../styles';
 const Game: FunctionComponent<{}> = (): ReactElement => {
   return (
     <FullPage>
-      <div style={{ maxWidth: 960, marginLeft: '30%', overflowY: 'scroll' }}>
+      <div style={{ maxWidth: 960, marginLeft: '1%',marginTop:'15%', overflowY: 'scroll' }}>
         <Board />
         <TurnInfo />
         <MoveList />
