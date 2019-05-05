@@ -26,7 +26,7 @@ const Board: FunctionComponent<Props> = (props: Props): ReactElement => {
     currentTurn
   } = props;
   return (
-    <svg width={50 * x} height={50 * (y + 1)} viewBox={`0 0 ${10 * x} ${10 * y}`} style={{width:"100%",position:"sticky"}}>
+    <svg width={50 * x} height={50 * (y + 1)} viewBox={`0 0 ${10 * x} ${10 * y}`} style={{width:"100%",position:"sticky",marginTop:"5vh"}}>
       {borders.map(border => (
         <Line key={getKeyFromPath(border)} path={border} color={currentTurn.player === Player.WHITE ? 'blue' : 'red'} />
       ))}

@@ -5,7 +5,6 @@ import { colors } from '../styles';
 const Wrapper = styled(animated.div)`
   display: flex;
   width: 100%;
-
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -56,7 +55,7 @@ const Logo = ({ toggle, onAnimationFinish, width, colors }: Props) => {
   return (
     <Wrapper>
       <LogoContainer>
-        <animated.svg viewBox="-1 -1 645 394" width={width}>
+        <animated.svg viewBox="-1 -1 645 394" width={width}  style={{marginBottom: "15vh" }}>
           <defs>
             <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stopColor={colors[0]} stopOpacity="1" />
